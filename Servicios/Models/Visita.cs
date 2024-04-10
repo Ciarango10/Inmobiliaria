@@ -17,8 +17,8 @@ namespace Servicios.Models
         public int IdVisita { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
         public string Comentarios { get; set; }
-        public Nullable<int> Id_Cliente { get; set; }
-        public Nullable<int> Id_Empleado { get; set; }
+        public string Documento_Cliente { get; set; }
+        public string Documento_Empleado { get; set; }
         public Nullable<int> Id_Inmueble { get; set; }
     
         public virtual Cliente Cliente { get; set; }

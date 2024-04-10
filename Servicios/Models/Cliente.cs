@@ -25,7 +25,6 @@ namespace Servicios.Models
             this.Visitas = new HashSet<Visita>();
         }
     
-        public int IdCliente { get; set; }
         public string Documento { get; set; }
         public string Nombre { get; set; }
         public string Email { get; set; }

@@ -8,8 +8,8 @@
     <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
     <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
     <Property Name="Precio_Mensual" Type="Double" />
-    <Property Name="Id_Cliente" Type="Int32" />
-    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Id_Inmueble" Type="Int32" />
     <Property Name="Id_FormaPago" Type="Int32" />
     <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Arriendo" FromRole="Arriendo" ToRole="Cliente" />
@@ -29,10 +29,9 @@
   </EntityType>
   <EntityType Name="Cliente">
     <Key>
-      <PropertyRef Name="IdCliente" />
+      <PropertyRef Name="Documento" />
     </Key>
-    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -60,8 +59,8 @@
     <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
     <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
     <Property Name="Monto" Type="Double" />
-    <Property Name="Id_Cliente" Type="Int32" />
-    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Id_Inmueble" Type="Int32" />
     <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Contrato" FromRole="Contrato" ToRole="Cliente" />
     <NavigationProperty Name="Comisions" Relationship="Self.FKContrato_Comision" FromRole="Contrato" ToRole="Comision" />
@@ -80,10 +79,9 @@
   </EntityType>
   <EntityType Name="Empleado">
     <Key>
-      <PropertyRef Name="IdEmpleado" />
+      <PropertyRef Name="Documento" />
     </Key>
-    <Property Name="IdEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -144,8 +142,8 @@
     <Property Name="Fecha" Type="DateTime" Precision="0" />
     <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Id_Estado" Type="Int32" />
-    <Property Name="Id_Cliente" Type="Int32" />
-    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Queja" FromRole="Queja" ToRole="Cliente" />
     <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Queja" FromRole="Queja" ToRole="Empleado" />
     <NavigationProperty Name="Estado" Relationship="Self.FKEstado_Queja" FromRole="Queja" ToRole="Estado" />
@@ -165,8 +163,8 @@
     <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fecha" Type="DateTime" Precision="0" />
     <Property Name="Precio" Type="Double" />
-    <Property Name="Id_Cliente" Type="Int32" />
-    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Id_Inmueble" Type="Int32" />
     <Property Name="Id_FormaPago" Type="Int32" />
     <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Venta" FromRole="Venta" ToRole="Cliente" />
@@ -181,8 +179,8 @@
     <Property Name="IdVisita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fecha" Type="DateTime" Precision="0" />
     <Property Name="Comentarios" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Id_Cliente" Type="Int32" />
-    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Id_Inmueble" Type="Int32" />
     <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Visita" FromRole="Visita" ToRole="Cliente" />
     <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Visita" FromRole="Visita" ToRole="Empleado" />
@@ -193,10 +191,10 @@
     <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Arriendo">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -205,10 +203,10 @@
     <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Arriendo">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -265,10 +263,10 @@
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Contrato">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -277,10 +275,10 @@
     <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Queja">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -289,10 +287,10 @@
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Venta">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -301,10 +299,10 @@
     <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Visita">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -325,10 +323,10 @@
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Contrato">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -361,10 +359,10 @@
     <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Queja">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -373,10 +371,10 @@
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Venta">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -385,10 +383,10 @@
     <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Visita">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

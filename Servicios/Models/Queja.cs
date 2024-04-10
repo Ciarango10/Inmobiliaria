@@ -18,8 +18,8 @@ namespace Servicios.Models
         public Nullable<System.DateTime> Fecha { get; set; }
         public string Descripcion { get; set; }
         public Nullable<int> Id_Estado { get; set; }
-        public Nullable<int> Id_Cliente { get; set; }
-        public Nullable<int> Id_Empleado { get; set; }
+        public string Documento_Cliente { get; set; }
+        public string Documento_Empleado { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual Empleado Empleado { get; set; }

@@ -8,8 +8,8 @@
     <Property Name="Fecha_Inicio" Type="date" />
     <Property Name="Fecha_Fin" Type="date" />
     <Property Name="Precio_Mensual" Type="float" />
-    <Property Name="Id_Cliente" Type="int" />
-    <Property Name="Id_Empleado" Type="int" />
+    <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
     <Property Name="Id_FormaPago" Type="int" />
   </EntityType>
@@ -23,10 +23,9 @@
   </EntityType>
   <EntityType Name="Cliente">
     <Key>
-      <PropertyRef Name="IdCliente" />
+      <PropertyRef Name="Documento" />
     </Key>
-    <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Documento" Type="varchar" MaxLength="20" />
+    <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="20" />
@@ -48,8 +47,8 @@
     <Property Name="Fecha_Inicio" Type="date" />
     <Property Name="Fecha_Fin" Type="date" />
     <Property Name="Monto" Type="float" />
-    <Property Name="Id_Cliente" Type="int" />
-    <Property Name="Id_Empleado" Type="int" />
+    <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
   </EntityType>
   <EntityType Name="Departamento">
@@ -62,10 +61,9 @@
   </EntityType>
   <EntityType Name="Empleado">
     <Key>
-      <PropertyRef Name="IdEmpleado" />
+      <PropertyRef Name="Documento" />
     </Key>
-    <Property Name="IdEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Documento" Type="varchar" MaxLength="20" />
+    <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="20" />
@@ -111,8 +109,8 @@
     <Property Name="Fecha" Type="date" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" />
     <Property Name="Id_Estado" Type="int" />
-    <Property Name="Id_Cliente" Type="int" />
-    <Property Name="Id_Empleado" Type="int" />
+    <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="TipoInmueble">
     <Key>
@@ -128,8 +126,8 @@
     <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="date" />
     <Property Name="Precio" Type="float" />
-    <Property Name="Id_Cliente" Type="int" />
-    <Property Name="Id_Empleado" Type="int" />
+    <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
     <Property Name="Id_FormaPago" Type="int" />
   </EntityType>
@@ -140,8 +138,8 @@
     <Property Name="IdVisita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="date" />
     <Property Name="Comentarios" Type="varchar" MaxLength="100" />
-    <Property Name="Id_Cliente" Type="int" />
-    <Property Name="Id_Empleado" Type="int" />
+    <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
   </EntityType>
   <Association Name="FKCiudad_Inmueble">
@@ -161,10 +159,10 @@
     <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Arriendo">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -173,10 +171,10 @@
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Contrato">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -185,10 +183,10 @@
     <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Queja">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -197,10 +195,10 @@
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Venta">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -209,10 +207,10 @@
     <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Visita">
-        <PropertyRef Name="Id_Cliente" />
+        <PropertyRef Name="Documento_Cliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -245,10 +243,10 @@
     <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Arriendo">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -257,10 +255,10 @@
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Contrato">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -269,10 +267,10 @@
     <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Queja">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -281,10 +279,10 @@
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Venta">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -293,10 +291,10 @@
     <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
-        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="Documento" />
       </Principal>
       <Dependent Role="Visita">
-        <PropertyRef Name="Id_Empleado" />
+        <PropertyRef Name="Documento_Empleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

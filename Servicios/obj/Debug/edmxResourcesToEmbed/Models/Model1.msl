@@ -8,8 +8,8 @@
           <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
           <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
           <ScalarProperty Name="Precio_Mensual" ColumnName="Precio_Mensual" />
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Documento_Cliente" ColumnName="Documento_Cliente" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
           <ScalarProperty Name="Id_Inmueble" ColumnName="Id_Inmueble" />
           <ScalarProperty Name="Id_FormaPago" ColumnName="Id_FormaPago" />
         </MappingFragment>
@@ -27,7 +27,6 @@
     <EntitySetMapping Name="Clientes">
       <EntityTypeMapping TypeName="DBInmobiliariaModel.Cliente">
         <MappingFragment StoreEntitySet="Cliente">
-          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -52,8 +51,8 @@
           <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
           <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Documento_Cliente" ColumnName="Documento_Cliente" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
           <ScalarProperty Name="Id_Inmueble" ColumnName="Id_Inmueble" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -70,7 +69,6 @@
     <EntitySetMapping Name="Empleadoes">
       <EntityTypeMapping TypeName="DBInmobiliariaModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
-          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -122,8 +120,8 @@
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Id_Estado" ColumnName="Id_Estado" />
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Documento_Cliente" ColumnName="Documento_Cliente" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -141,8 +139,8 @@
           <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Precio" ColumnName="Precio" />
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Documento_Cliente" ColumnName="Documento_Cliente" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
           <ScalarProperty Name="Id_Inmueble" ColumnName="Id_Inmueble" />
           <ScalarProperty Name="Id_FormaPago" ColumnName="Id_FormaPago" />
         </MappingFragment>
@@ -154,8 +152,8 @@
           <ScalarProperty Name="IdVisita" ColumnName="IdVisita" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Documento_Cliente" ColumnName="Documento_Cliente" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
           <ScalarProperty Name="Id_Inmueble" ColumnName="Id_Inmueble" />
         </MappingFragment>
       </EntityTypeMapping>
