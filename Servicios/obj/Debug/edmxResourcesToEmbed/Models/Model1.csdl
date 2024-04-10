@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBInmobiliariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Arriendo">
+    <Key>
+      <PropertyRef Name="IdArriendo" />
+    </Key>
+    <Property Name="IdArriendo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
+    <Property Name="Precio_Mensual" Type="Double" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Id_Inmueble" Type="Int32" />
+    <Property Name="Id_FormaPago" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Arriendo" FromRole="Arriendo" ToRole="Cliente" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Arriendo" FromRole="Arriendo" ToRole="Empleado" />
+    <NavigationProperty Name="FormaPago" Relationship="Self.FKFormaPago_Arriendo" FromRole="Arriendo" ToRole="FormaPago" />
+    <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Arriendo" FromRole="Arriendo" ToRole="Inmueble" />
+  </EntityType>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="IdCiudad" />
+    </Key>
+    <Property Name="IdCiudad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Id_Departamento" Type="Int32" />
+    <NavigationProperty Name="Inmuebles" Relationship="Self.FKCiudad_Inmueble" FromRole="Ciudad" ToRole="Inmueble" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FKDepartamento_Ciudad" FromRole="Ciudad" ToRole="Departamento" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Arriendoes" Relationship="Self.FKCliente_Arriendo" FromRole="Cliente" ToRole="Arriendo" />
+    <NavigationProperty Name="Contratoes" Relationship="Self.FKCliente_Contrato" FromRole="Cliente" ToRole="Contrato" />
+    <NavigationProperty Name="Quejas" Relationship="Self.FKCliente_Queja" FromRole="Cliente" ToRole="Queja" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FKCliente_Venta" FromRole="Cliente" ToRole="Venta" />
+    <NavigationProperty Name="Visitas" Relationship="Self.FKCliente_Visita" FromRole="Cliente" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Comision">
+    <Key>
+      <PropertyRef Name="IdComision" />
+    </Key>
+    <Property Name="IdComision" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Monto" Type="Double" />
+    <Property Name="Id_Contrato" Type="Int32" />
+    <NavigationProperty Name="Contrato" Relationship="Self.FKContrato_Comision" FromRole="Comision" ToRole="Contrato" />
+  </EntityType>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="IdContrato" />
+    </Key>
+    <Property Name="IdContrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
+    <Property Name="Monto" Type="Double" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Id_Inmueble" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Contrato" FromRole="Contrato" ToRole="Cliente" />
+    <NavigationProperty Name="Comisions" Relationship="Self.FKContrato_Comision" FromRole="Contrato" ToRole="Comision" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Contrato" FromRole="Contrato" ToRole="Empleado" />
+    <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Contrato" FromRole="Contrato" ToRole="Inmueble" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Id_Pais" Type="Int32" />
+    <NavigationProperty Name="Ciudads" Relationship="Self.FKDepartamento_Ciudad" FromRole="Departamento" ToRole="Ciudad" />
+    <NavigationProperty Name="Pai" Relationship="Self.FKPais_Departamento" FromRole="Departamento" ToRole="Pais" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Arriendoes" Relationship="Self.FKEmpleado_Arriendo" FromRole="Empleado" ToRole="Arriendo" />
+    <NavigationProperty Name="Contratoes" Relationship="Self.FKEmpleado_Contrato" FromRole="Empleado" ToRole="Contrato" />
+    <NavigationProperty Name="Quejas" Relationship="Self.FKEmpleado_Queja" FromRole="Empleado" ToRole="Queja" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FKEmpleado_Venta" FromRole="Empleado" ToRole="Venta" />
+    <NavigationProperty Name="Visitas" Relationship="Self.FKEmpleado_Visita" FromRole="Empleado" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Quejas" Relationship="Self.FKEstado_Queja" FromRole="Estado" ToRole="Queja" />
+  </EntityType>
+  <EntityType Name="FormaPago">
+    <Key>
+      <PropertyRef Name="IdFormaPago" />
+    </Key>
+    <Property Name="IdFormaPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Detalles" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Arriendoes" Relationship="Self.FKFormaPago_Arriendo" FromRole="FormaPago" ToRole="Arriendo" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FKFormaPago_Venta" FromRole="FormaPago" ToRole="Venta" />
+  </EntityType>
+  <EntityType Name="Inmueble">
+    <Key>
+      <PropertyRef Name="IdInmueble" />
+    </Key>
+    <Property Name="IdInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Double" />
+    <Property Name="Id_Ciudad" Type="Int32" />
+    <Property Name="Id_TipoInmueble" Type="Int32" />
+    <NavigationProperty Name="Arriendoes" Relationship="Self.FKInmueble_Arriendo" FromRole="Inmueble" ToRole="Arriendo" />
+    <NavigationProperty Name="Ciudad" Relationship="Self.FKCiudad_Inmueble" FromRole="Inmueble" ToRole="Ciudad" />
+    <NavigationProperty Name="Contratoes" Relationship="Self.FKInmueble_Contrato" FromRole="Inmueble" ToRole="Contrato" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FKInmueble_Venta" FromRole="Inmueble" ToRole="Venta" />
+    <NavigationProperty Name="Visitas" Relationship="Self.FKInmueble_Visita" FromRole="Inmueble" ToRole="Visita" />
+    <NavigationProperty Name="TipoInmueble" Relationship="Self.FKTipoInmueble_Inmueble" FromRole="Inmueble" ToRole="TipoInmueble" />
+  </EntityType>
+  <EntityType Name="Pai">
+    <Key>
+      <PropertyRef Name="IdPais" />
+    </Key>
+    <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Departamentoes" Relationship="Self.FKPais_Departamento" FromRole="Pais" ToRole="Departamento" />
+  </EntityType>
+  <EntityType Name="Queja">
+    <Key>
+      <PropertyRef Name="IdQueja" />
+    </Key>
+    <Property Name="IdQueja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Id_Estado" Type="Int32" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Queja" FromRole="Queja" ToRole="Cliente" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Queja" FromRole="Queja" ToRole="Empleado" />
+    <NavigationProperty Name="Estado" Relationship="Self.FKEstado_Queja" FromRole="Queja" ToRole="Estado" />
+  </EntityType>
+  <EntityType Name="TipoInmueble">
+    <Key>
+      <PropertyRef Name="IdTipoInmueble" />
+    </Key>
+    <Property Name="IdTipoInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Inmuebles" Relationship="Self.FKTipoInmueble_Inmueble" FromRole="TipoInmueble" ToRole="Inmueble" />
+  </EntityType>
+  <EntityType Name="Venta">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Precio" Type="Double" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Id_Inmueble" Type="Int32" />
+    <Property Name="Id_FormaPago" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Venta" FromRole="Venta" ToRole="Cliente" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Venta" FromRole="Venta" ToRole="Empleado" />
+    <NavigationProperty Name="FormaPago" Relationship="Self.FKFormaPago_Venta" FromRole="Venta" ToRole="FormaPago" />
+    <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Venta" FromRole="Venta" ToRole="Inmueble" />
+  </EntityType>
+  <EntityType Name="Visita">
+    <Key>
+      <PropertyRef Name="IdVisita" />
+    </Key>
+    <Property Name="IdVisita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Comentarios" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Id_Inmueble" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKCliente_Visita" FromRole="Visita" ToRole="Cliente" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Visita" FromRole="Visita" ToRole="Empleado" />
+    <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Visita" FromRole="Visita" ToRole="Inmueble" />
+  </EntityType>
+  <Association Name="FKCliente_Arriendo">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Arriendo">
+        <PropertyRef Name="Id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleado_Arriendo">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Arriendo">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFormaPago_Arriendo">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Arriendo">
+        <PropertyRef Name="Id_FormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInmueble_Arriendo">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="0..1" />
+    <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="Arriendo">
+        <PropertyRef Name="Id_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCiudad_Inmueble">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="IdCiudad" />
+      </Principal>
+      <Dependent Role="Inmueble">
+        <PropertyRef Name="Id_Ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamento_Ciudad">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="IdDepartamento" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="Id_Departamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCliente_Contrato">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="Id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCliente_Queja">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Queja">
+        <PropertyRef Name="Id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCliente_Venta">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCliente_Visita">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="Id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKContrato_Comision">
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="0..1" />
+    <End Role="Comision" Type="Self.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="IdContrato" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="Id_Contrato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleado_Contrato">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInmueble_Contrato">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="0..1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="Id_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPais_Departamento">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="0..1" />
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="IdPais" />
+      </Principal>
+      <Dependent Role="Departamento">
+        <PropertyRef Name="Id_Pais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleado_Queja">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Queja">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleado_Venta">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleado_Visita">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEstado_Queja">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Queja">
+        <PropertyRef Name="Id_Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFormaPago_Venta">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Id_FormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInmueble_Venta">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="0..1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Id_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInmueble_Visita">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="Id_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoInmueble_Inmueble">
+    <End Role="TipoInmueble" Type="Self.TipoInmueble" Multiplicity="0..1" />
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoInmueble">
+        <PropertyRef Name="IdTipoInmueble" />
+      </Principal>
+      <Dependent Role="Inmueble">
+        <PropertyRef Name="Id_TipoInmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBInmobiliariaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Arriendoes" EntityType="Self.Arriendo" />
+    <EntitySet Name="Ciudads" EntityType="Self.Ciudad" />
+    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+    <EntitySet Name="Comisions" EntityType="Self.Comision" />
+    <EntitySet Name="Contratoes" EntityType="Self.Contrato" />
+    <EntitySet Name="Departamentoes" EntityType="Self.Departamento" />
+    <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
+    <EntitySet Name="Estadoes" EntityType="Self.Estado" />
+    <EntitySet Name="FormaPagoes" EntityType="Self.FormaPago" />
+    <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
+    <EntitySet Name="Pais" EntityType="Self.Pai" />
+    <EntitySet Name="Quejas" EntityType="Self.Queja" />
+    <EntitySet Name="TipoInmuebles" EntityType="Self.TipoInmueble" />
+    <EntitySet Name="Ventas" EntityType="Self.Venta" />
+    <EntitySet Name="Visitas" EntityType="Self.Visita" />
+    <AssociationSet Name="FKCliente_Arriendo" Association="Self.FKCliente_Arriendo">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Arriendo" EntitySet="Arriendoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Arriendo" Association="Self.FKEmpleado_Arriendo">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Arriendo" EntitySet="Arriendoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKFormaPago_Arriendo" Association="Self.FKFormaPago_Arriendo">
+      <End Role="FormaPago" EntitySet="FormaPagoes" />
+      <End Role="Arriendo" EntitySet="Arriendoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKInmueble_Arriendo" Association="Self.FKInmueble_Arriendo">
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+      <End Role="Arriendo" EntitySet="Arriendoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKCiudad_Inmueble" Association="Self.FKCiudad_Inmueble">
+      <End Role="Ciudad" EntitySet="Ciudads" />
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamento_Ciudad" Association="Self.FKDepartamento_Ciudad">
+      <End Role="Departamento" EntitySet="Departamentoes" />
+      <End Role="Ciudad" EntitySet="Ciudads" />
+    </AssociationSet>
+    <AssociationSet Name="FKCliente_Contrato" Association="Self.FKCliente_Contrato">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Contrato" EntitySet="Contratoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKCliente_Queja" Association="Self.FKCliente_Queja">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Queja" EntitySet="Quejas" />
+    </AssociationSet>
+    <AssociationSet Name="FKCliente_Venta" Association="Self.FKCliente_Venta">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Venta" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FKCliente_Visita" Association="Self.FKCliente_Visita">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Visita" EntitySet="Visitas" />
+    </AssociationSet>
+    <AssociationSet Name="FKContrato_Comision" Association="Self.FKContrato_Comision">
+      <End Role="Contrato" EntitySet="Contratoes" />
+      <End Role="Comision" EntitySet="Comisions" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Contrato" Association="Self.FKEmpleado_Contrato">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Contrato" EntitySet="Contratoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKInmueble_Contrato" Association="Self.FKInmueble_Contrato">
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+      <End Role="Contrato" EntitySet="Contratoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKPais_Departamento" Association="Self.FKPais_Departamento">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Departamento" EntitySet="Departamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Queja" Association="Self.FKEmpleado_Queja">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Queja" EntitySet="Quejas" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Venta" Association="Self.FKEmpleado_Venta">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Venta" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Visita" Association="Self.FKEmpleado_Visita">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Visita" EntitySet="Visitas" />
+    </AssociationSet>
+    <AssociationSet Name="FKEstado_Queja" Association="Self.FKEstado_Queja">
+      <End Role="Estado" EntitySet="Estadoes" />
+      <End Role="Queja" EntitySet="Quejas" />
+    </AssociationSet>
+    <AssociationSet Name="FKFormaPago_Venta" Association="Self.FKFormaPago_Venta">
+      <End Role="FormaPago" EntitySet="FormaPagoes" />
+      <End Role="Venta" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FKInmueble_Venta" Association="Self.FKInmueble_Venta">
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+      <End Role="Venta" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FKInmueble_Visita" Association="Self.FKInmueble_Visita">
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+      <End Role="Visita" EntitySet="Visitas" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoInmueble_Inmueble" Association="Self.FKTipoInmueble_Inmueble">
+      <End Role="TipoInmueble" EntitySet="TipoInmuebles" />
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\PC\\Documents\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|c:\\users\\pc\\documents\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +43,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Documents\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\PC\\Documents\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAiwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T11:57:44.621Z",
+              "EditorCaption": ""
             }
           ]
         }
