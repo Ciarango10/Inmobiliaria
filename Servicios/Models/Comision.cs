@@ -16,7 +16,7 @@ namespace Servicios.Models
     {
         public int IdComision { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<double> Monto { get; set; }
+        public double Monto { get; set; }
         public Nullable<int> Id_Contrato { get; set; }
     
         public virtual Contrato Contrato { get; set; }

@@ -16,7 +16,7 @@ namespace Servicios.Models
     {
         public int IdVenta { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<double> Precio { get; set; }
+        public double Precio { get; set; }
         public string Documento_Cliente { get; set; }
         public string Documento_Empleado { get; set; }
         public Nullable<int> Id_Inmueble { get; set; }

@@ -26,7 +26,7 @@ namespace Servicios.Models
     
         public int IdInmueble { get; set; }
         public string Direccion { get; set; }
-        public Nullable<double> Precio { get; set; }
+        public double Precio { get; set; }
         public Nullable<int> Id_Ciudad { get; set; }
         public Nullable<int> Id_TipoInmueble { get; set; }
 

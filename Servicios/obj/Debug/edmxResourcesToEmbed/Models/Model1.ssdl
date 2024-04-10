@@ -5,9 +5,9 @@
       <PropertyRef Name="IdArriendo" />
     </Key>
     <Property Name="IdArriendo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Fecha_Inicio" Type="date" />
-    <Property Name="Fecha_Fin" Type="date" />
-    <Property Name="Precio_Mensual" Type="float" />
+    <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+    <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+    <Property Name="Precio_Mensual" Type="float" Nullable="false" />
     <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
     <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
@@ -18,7 +18,7 @@
       <PropertyRef Name="IdCiudad" />
     </Key>
     <Property Name="IdCiudad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="25" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Id_Departamento" Type="int" />
   </EntityType>
   <EntityType Name="Cliente">
@@ -26,9 +26,11 @@
       <PropertyRef Name="Documento" />
     </Key>
     <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="date" />
   </EntityType>
   <EntityType Name="Comision">
     <Key>
@@ -36,7 +38,7 @@
     </Key>
     <Property Name="IdComision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="date" />
-    <Property Name="Monto" Type="float" />
+    <Property Name="Monto" Type="float" Nullable="false" />
     <Property Name="Id_Contrato" Type="int" />
   </EntityType>
   <EntityType Name="Contrato">
@@ -44,9 +46,9 @@
       <PropertyRef Name="IdContrato" />
     </Key>
     <Property Name="IdContrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Fecha_Inicio" Type="date" />
-    <Property Name="Fecha_Fin" Type="date" />
-    <Property Name="Monto" Type="float" />
+    <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+    <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+    <Property Name="Monto" Type="float" Nullable="false" />
     <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
     <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />
@@ -56,7 +58,7 @@
       <PropertyRef Name="IdDepartamento" />
     </Key>
     <Property Name="IdDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="25" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Id_Pais" Type="int" />
   </EntityType>
   <EntityType Name="Empleado">
@@ -64,16 +66,18 @@
       <PropertyRef Name="Documento" />
     </Key>
     <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="date" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
       <PropertyRef Name="IdEstado" />
     </Key>
     <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="25" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="FormaPago">
@@ -81,7 +85,7 @@
       <PropertyRef Name="IdFormaPago" />
     </Key>
     <Property Name="IdFormaPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tipo" Type="varchar" MaxLength="15" />
+    <Property Name="Tipo" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="Detalles" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Inmueble">
@@ -89,8 +93,8 @@
       <PropertyRef Name="IdInmueble" />
     </Key>
     <Property Name="IdInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Direccion" Type="varchar" MaxLength="30" />
-    <Property Name="Precio" Type="float" />
+    <Property Name="Direccion" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Precio" Type="float" Nullable="false" />
     <Property Name="Id_Ciudad" Type="int" />
     <Property Name="Id_TipoInmueble" Type="int" />
   </EntityType>
@@ -99,7 +103,7 @@
       <PropertyRef Name="IdPais" />
     </Key>
     <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="25" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
   </EntityType>
   <EntityType Name="Queja">
     <Key>
@@ -107,7 +111,7 @@
     </Key>
     <Property Name="IdQueja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="date" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Id_Estado" Type="int" />
     <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
     <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
@@ -117,7 +121,7 @@
       <PropertyRef Name="IdTipoInmueble" />
     </Key>
     <Property Name="IdTipoInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tipo" Type="varchar" MaxLength="30" />
+    <Property Name="Tipo" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>
@@ -125,7 +129,7 @@
     </Key>
     <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="date" />
-    <Property Name="Precio" Type="float" />
+    <Property Name="Precio" Type="float" Nullable="false" />
     <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
     <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
     <Property Name="Id_Inmueble" Type="int" />

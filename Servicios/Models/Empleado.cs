@@ -27,8 +27,10 @@ namespace Servicios.Models
     
         public string Documento { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
+        public Nullable<System.DateTime> FechaNacimiento { get; set; }
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

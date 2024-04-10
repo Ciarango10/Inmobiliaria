@@ -75,7 +75,6 @@ namespace Servicios.Clases
                 // Guardamos en la base de datos 
                 dbInmobiliaria.SaveChanges();
                 return "Se eliminó el empleado con documento: " + empleado.Documento;
-
             }
             catch
             (Exception ex)

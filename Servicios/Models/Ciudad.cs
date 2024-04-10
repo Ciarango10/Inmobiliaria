@@ -24,8 +24,8 @@ namespace Servicios.Models
         public int IdCiudad { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> Id_Departamento { get; set; }
-
-        [JsonIgnore]
+        
+        [JsonIgnore]            
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inmueble> Inmuebles { get; set; }
         public virtual Departamento Departamento { get; set; }

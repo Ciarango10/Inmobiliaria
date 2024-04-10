@@ -29,8 +29,10 @@
         <MappingFragment StoreEntitySet="Cliente">
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -71,8 +73,10 @@
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

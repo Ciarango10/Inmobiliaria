@@ -22,9 +22,9 @@ namespace Servicios.Models
         }
     
         public int IdContrato { get; set; }
-        public Nullable<System.DateTime> Fecha_Inicio { get; set; }
-        public Nullable<System.DateTime> Fecha_Fin { get; set; }
-        public Nullable<double> Monto { get; set; }
+        public System.DateTime Fecha_Inicio { get; set; }
+        public System.DateTime Fecha_Fin { get; set; }
+        public double Monto { get; set; }
         public string Documento_Cliente { get; set; }
         public string Documento_Empleado { get; set; }
         public Nullable<int> Id_Inmueble { get; set; }

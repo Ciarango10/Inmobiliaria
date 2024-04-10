@@ -10,9 +10,9 @@
             <PropertyRef Name="IdArriendo" />
           </Key>
           <Property Name="IdArriendo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Fecha_Inicio" Type="date" />
-          <Property Name="Fecha_Fin" Type="date" />
-          <Property Name="Precio_Mensual" Type="float" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+          <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+          <Property Name="Precio_Mensual" Type="float" Nullable="false" />
           <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
           <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
           <Property Name="Id_Inmueble" Type="int" />
@@ -23,7 +23,7 @@
             <PropertyRef Name="IdCiudad" />
           </Key>
           <Property Name="IdCiudad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Id_Departamento" Type="int" />
         </EntityType>
         <EntityType Name="Cliente">
@@ -31,9 +31,11 @@
             <PropertyRef Name="Documento" />
           </Key>
           <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="FechaNacimiento" Type="date" />
         </EntityType>
         <EntityType Name="Comision">
           <Key>
@@ -41,7 +43,7 @@
           </Key>
           <Property Name="IdComision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha" Type="date" />
-          <Property Name="Monto" Type="float" />
+          <Property Name="Monto" Type="float" Nullable="false" />
           <Property Name="Id_Contrato" Type="int" />
         </EntityType>
         <EntityType Name="Contrato">
@@ -49,9 +51,9 @@
             <PropertyRef Name="IdContrato" />
           </Key>
           <Property Name="IdContrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Fecha_Inicio" Type="date" />
-          <Property Name="Fecha_Fin" Type="date" />
-          <Property Name="Monto" Type="float" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+          <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
           <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
           <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
           <Property Name="Id_Inmueble" Type="int" />
@@ -61,7 +63,7 @@
             <PropertyRef Name="IdDepartamento" />
           </Key>
           <Property Name="IdDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Id_Pais" Type="int" />
         </EntityType>
         <EntityType Name="Empleado">
@@ -69,16 +71,18 @@
             <PropertyRef Name="Documento" />
           </Key>
           <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="FechaNacimiento" Type="date" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
             <PropertyRef Name="IdEstado" />
           </Key>
           <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Descripcion" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="FormaPago">
@@ -86,7 +90,7 @@
             <PropertyRef Name="IdFormaPago" />
           </Key>
           <Property Name="IdFormaPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tipo" Type="varchar" MaxLength="15" />
+          <Property Name="Tipo" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="Detalles" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Inmueble">
@@ -94,8 +98,8 @@
             <PropertyRef Name="IdInmueble" />
           </Key>
           <Property Name="IdInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Direccion" Type="varchar" MaxLength="30" />
-          <Property Name="Precio" Type="float" />
+          <Property Name="Direccion" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Precio" Type="float" Nullable="false" />
           <Property Name="Id_Ciudad" Type="int" />
           <Property Name="Id_TipoInmueble" Type="int" />
         </EntityType>
@@ -104,7 +108,7 @@
             <PropertyRef Name="IdPais" />
           </Key>
           <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
         </EntityType>
         <EntityType Name="Queja">
           <Key>
@@ -112,7 +116,7 @@
           </Key>
           <Property Name="IdQueja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha" Type="date" />
-          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Id_Estado" Type="int" />
           <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
           <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
@@ -122,7 +126,7 @@
             <PropertyRef Name="IdTipoInmueble" />
           </Key>
           <Property Name="IdTipoInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tipo" Type="varchar" MaxLength="30" />
+          <Property Name="Tipo" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -130,7 +134,7 @@
           </Key>
           <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha" Type="date" />
-          <Property Name="Precio" Type="float" />
+          <Property Name="Precio" Type="float" Nullable="false" />
           <Property Name="Documento_Cliente" Type="varchar" MaxLength="20" />
           <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
           <Property Name="Id_Inmueble" Type="int" />
@@ -526,9 +530,9 @@
             <PropertyRef Name="IdArriendo" />
           </Key>
           <Property Name="IdArriendo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
-          <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
-          <Property Name="Precio_Mensual" Type="Double" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Fin" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Precio_Mensual" Type="Double" Nullable="false" />
           <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Id_Inmueble" Type="Int32" />
@@ -543,7 +547,7 @@
             <PropertyRef Name="IdCiudad" />
           </Key>
           <Property Name="IdCiudad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Id_Departamento" Type="Int32" />
           <NavigationProperty Name="Inmuebles" Relationship="Self.FKCiudad_Inmueble" FromRole="Ciudad" ToRole="Inmueble" />
           <NavigationProperty Name="Departamento" Relationship="Self.FKDepartamento_Ciudad" FromRole="Ciudad" ToRole="Departamento" />
@@ -553,9 +557,11 @@
             <PropertyRef Name="Documento" />
           </Key>
           <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKCliente_Arriendo" FromRole="Cliente" ToRole="Arriendo" />
           <NavigationProperty Name="Contratoes" Relationship="Self.FKCliente_Contrato" FromRole="Cliente" ToRole="Contrato" />
           <NavigationProperty Name="Quejas" Relationship="Self.FKCliente_Queja" FromRole="Cliente" ToRole="Queja" />
@@ -568,7 +574,7 @@
           </Key>
           <Property Name="IdComision" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
-          <Property Name="Monto" Type="Double" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
           <Property Name="Id_Contrato" Type="Int32" />
           <NavigationProperty Name="Contrato" Relationship="Self.FKContrato_Comision" FromRole="Comision" ToRole="Contrato" />
         </EntityType>
@@ -577,9 +583,9 @@
             <PropertyRef Name="IdContrato" />
           </Key>
           <Property Name="IdContrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
-          <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
-          <Property Name="Monto" Type="Double" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Fin" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
           <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Id_Inmueble" Type="Int32" />
@@ -593,7 +599,7 @@
             <PropertyRef Name="IdDepartamento" />
           </Key>
           <Property Name="IdDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Id_Pais" Type="Int32" />
           <NavigationProperty Name="Ciudads" Relationship="Self.FKDepartamento_Ciudad" FromRole="Departamento" ToRole="Ciudad" />
           <NavigationProperty Name="Pai" Relationship="Self.FKPais_Departamento" FromRole="Departamento" ToRole="Pais" />
@@ -603,9 +609,11 @@
             <PropertyRef Name="Documento" />
           </Key>
           <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKEmpleado_Arriendo" FromRole="Empleado" ToRole="Arriendo" />
           <NavigationProperty Name="Contratoes" Relationship="Self.FKEmpleado_Contrato" FromRole="Empleado" ToRole="Contrato" />
           <NavigationProperty Name="Quejas" Relationship="Self.FKEmpleado_Queja" FromRole="Empleado" ToRole="Queja" />
@@ -617,7 +625,7 @@
             <PropertyRef Name="IdEstado" />
           </Key>
           <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Quejas" Relationship="Self.FKEstado_Queja" FromRole="Estado" ToRole="Queja" />
         </EntityType>
@@ -626,7 +634,7 @@
             <PropertyRef Name="IdFormaPago" />
           </Key>
           <Property Name="IdFormaPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tipo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Detalles" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKFormaPago_Arriendo" FromRole="FormaPago" ToRole="Arriendo" />
           <NavigationProperty Name="Ventas" Relationship="Self.FKFormaPago_Venta" FromRole="FormaPago" ToRole="Venta" />
@@ -636,8 +644,8 @@
             <PropertyRef Name="IdInmueble" />
           </Key>
           <Property Name="IdInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Precio" Type="Double" />
+          <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Precio" Type="Double" Nullable="false" />
           <Property Name="Id_Ciudad" Type="Int32" />
           <Property Name="Id_TipoInmueble" Type="Int32" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKInmueble_Arriendo" FromRole="Inmueble" ToRole="Arriendo" />
@@ -652,7 +660,7 @@
             <PropertyRef Name="IdPais" />
           </Key>
           <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Departamentoes" Relationship="Self.FKPais_Departamento" FromRole="Pais" ToRole="Departamento" />
         </EntityType>
         <EntityType Name="Queja">
@@ -661,7 +669,7 @@
           </Key>
           <Property Name="IdQueja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
-          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Id_Estado" Type="Int32" />
           <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -674,7 +682,7 @@
             <PropertyRef Name="IdTipoInmueble" />
           </Key>
           <Property Name="IdTipoInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Inmuebles" Relationship="Self.FKTipoInmueble_Inmueble" FromRole="TipoInmueble" ToRole="Inmueble" />
         </EntityType>
         <EntityType Name="Venta">
@@ -683,7 +691,7 @@
           </Key>
           <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
-          <Property Name="Precio" Type="Double" />
+          <Property Name="Precio" Type="Double" Nullable="false" />
           <Property Name="Documento_Cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Id_Inmueble" Type="Int32" />
@@ -1110,8 +1118,10 @@
               <MappingFragment StoreEntitySet="Cliente">
                 <ScalarProperty Name="Documento" ColumnName="Documento" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1152,8 +1162,10 @@
               <MappingFragment StoreEntitySet="Empleado">
                 <ScalarProperty Name="Documento" ColumnName="Documento" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
