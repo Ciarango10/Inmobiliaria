@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Xml.Linq;
 
 namespace Servicios.Controllers
 {
+    [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
     public class EmpleadosController : ApiController
     {
         // GET sin parámetros -- Invoca el consultar todos
