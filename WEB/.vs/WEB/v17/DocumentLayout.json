@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\empleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\paginas\\empleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\empleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\paginabase.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\paginas\\paginabase.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\paginabase.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -66,8 +66,7 @@
               "RelativeToolTip": "Paginas\\PaginaBase.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-17T18:59:32.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T18:59:32.193Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Paginas\\Menu.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-17T18:57:45.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T18:57:45.643Z"
             },
             {
               "$type": "Document",
@@ -90,7 +88,7 @@
               "RelativeDocumentMoniker": "Paginas\\Scripts\\Empleado.js",
               "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Empleado.js",
               "RelativeToolTip": "Paginas\\Scripts\\Empleado.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAFAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-04-17T18:56:09.131Z",
               "EditorCaption": ""
@@ -103,7 +101,7 @@
               "RelativeDocumentMoniker": "Paginas\\Empleado.html",
               "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Empleado.html",
               "RelativeToolTip": "Paginas\\Empleado.html",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAEIAAABFAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEIAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-04-17T18:55:29.988Z",
               "EditorCaption": ""

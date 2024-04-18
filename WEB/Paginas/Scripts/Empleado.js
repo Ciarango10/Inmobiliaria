@@ -21,6 +21,7 @@
 });
 
 async function Consultar() {
+
     let Documento = $("#txtDocumento").val();
     try {
         const Respuesta = await fetch(`https://localhost:44340/api/Empleados?Documento=${Documento}`,
@@ -38,11 +39,12 @@ async function Consultar() {
         $("#txtApellido").val(Resultado.Apellido);
         $("#txtEmail").val(Resultado.Email);
         $("#txtTelefono").val(Resultado.Telefono);
-        $("#dtFechaNacimiento").val(Resultado.FechaNacimiento);
+        $("#dtFechaNacimiento").val(new Date(Resultado.FechaNacimiento).toISOString().split('T')[0]);
     }
     catch (error) {
         $("#dvMensaje").html(error);
     }
+
 }
 
 async function EjecutarComando(Comando) {
