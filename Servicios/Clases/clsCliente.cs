@@ -4,28 +4,27 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
-using System.Xml.Linq;
 
 namespace Servicios.Clases
 {
-    public class clsEmpleado
+    public class clsCliente
     {
         // Instanciamos el modelo de base de datos
         private DBInmobiliariaEntities dbInmobiliaria = new DBInmobiliariaEntities();
 
-        // Llamamos al modelo de empleado
-        public Empleado empleado { get; set; }
+        // Llamamos al modelo de cliente
+        public Cliente cliente { get; set; }
 
         // Metodos de la clase
         public string Insertar()
         {
 
             try
-            {   // Agregamos el empleado
-                dbInmobiliaria.Empleadoes.Add(empleado);
+            {   // Agregamos el cliente
+                dbInmobiliaria.Clientes.Add(cliente);
                 // Guardamos en la base de datos
                 dbInmobiliaria.SaveChanges();
-                return "Se agregó el empleado con documento: " + empleado.Documento;
+                return "Se agregó el cliente con documento: " + cliente.Documento;
             }
             catch
             (Exception ex)
@@ -39,11 +38,11 @@ namespace Servicios.Clases
         {
 
             try
-            {   // Actualizamos el empleado
-                dbInmobiliaria.Empleadoes.AddOrUpdate(empleado);
+            {   // Actualizamos el cliente
+                dbInmobiliaria.Clientes.AddOrUpdate(cliente);
                 // Guardamos en la base de datos
                 dbInmobiliaria.SaveChanges();
-                return "Se actualizó el empleado con documento: " + empleado.Documento;
+                return "Se actualizó el cliente con documento: " + cliente.Documento;
             }
             catch
             (Exception ex)
@@ -53,28 +52,28 @@ namespace Servicios.Clases
 
         }
 
-        public List<Empleado> ConsultarTodos()
+        public List<Cliente> ConsultarTodos()
         {
-            return dbInmobiliaria.Empleadoes.OrderBy(e => e.Nombre).ToList();
+            return dbInmobiliaria.Clientes.OrderBy(c => c.Nombre).ToList();
         }
 
-        public Empleado Consultar(string Documento)
+        public Cliente Consultar(string Documento)
         {
-            // Consultamos al empleado en la base de datos
-            return dbInmobiliaria.Empleadoes.FirstOrDefault(e => e.Documento == Documento);
+            // Consultamos al cliente en la base de datos
+            return dbInmobiliaria.Clientes.FirstOrDefault(c => c.Documento == Documento);
         }
 
         public string Eliminar()
         {
 
             try
-            {   //Se consulta el empleado
-                Empleado _empleado = Consultar(empleado.Documento);
-                //El empleado se remueve de la lista de empleados
-                dbInmobiliaria.Empleadoes.Remove(_empleado);
+            {   //Se consulta el cliente
+                Cliente _cliente = Consultar(cliente.Documento);
+                //El cliente se remueve de la lista de clientes
+                dbInmobiliaria.Clientes.Remove(_cliente);
                 // Guardamos en la base de datos 
                 dbInmobiliaria.SaveChanges();
-                return "Se eliminó el empleado con documento: " + empleado.Documento;
+                return "Se eliminó el cliente con documento: " + cliente.Documento;
             }
             catch
             (Exception ex)
