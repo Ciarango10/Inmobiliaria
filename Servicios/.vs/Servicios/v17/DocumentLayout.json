@@ -3,76 +3,16 @@
   "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\clases\\clsempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\servicios\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\servicios\\clases\\clsempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\servicios\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\tipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\tipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\queja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\queja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\inmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\inmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\models\\arriendo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\arriendo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,36 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmpleadosController.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
-              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAYAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T11:57:44.621Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsEmpleado.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Clases\\clsEmpleado.cs",
-              "RelativeDocumentMoniker": "Clases\\clsEmpleado.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Clases\\clsEmpleado.cs",
-              "RelativeToolTip": "Clases\\clsEmpleado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:06:06.054Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
@@ -142,195 +54,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Visita.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Visita.cs",
-              "RelativeDocumentMoniker": "Models\\Visita.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Visita.cs",
-              "RelativeToolTip": "Models\\Visita.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:58:15.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Venta.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Venta.cs",
-              "RelativeDocumentMoniker": "Models\\Venta.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Venta.cs",
-              "RelativeToolTip": "Models\\Venta.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:58:12.394Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TipoInmueble.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\TipoInmueble.cs",
-              "RelativeDocumentMoniker": "Models\\TipoInmueble.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\TipoInmueble.cs",
-              "RelativeToolTip": "Models\\TipoInmueble.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:58:08.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Queja.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Queja.cs",
-              "RelativeDocumentMoniker": "Models\\Queja.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Queja.cs",
-              "RelativeToolTip": "Models\\Queja.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:58:03.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Pai.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Pai.cs",
-              "RelativeDocumentMoniker": "Models\\Pai.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Pai.cs",
-              "RelativeToolTip": "Models\\Pai.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:59.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Model1.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Model1.cs",
-              "RelativeDocumentMoniker": "Models\\Model1.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Model1.cs",
-              "RelativeToolTip": "Models\\Model1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:58.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Inmueble.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Inmueble.cs",
-              "RelativeDocumentMoniker": "Models\\Inmueble.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Inmueble.cs",
-              "RelativeToolTip": "Models\\Inmueble.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC0AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:37.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormaPago.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\FormaPago.cs",
-              "RelativeDocumentMoniker": "Models\\FormaPago.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\FormaPago.cs",
-              "RelativeToolTip": "Models\\FormaPago.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:25.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Estado.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Estado.cs",
-              "RelativeDocumentMoniker": "Models\\Estado.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Estado.cs",
-              "RelativeToolTip": "Models\\Estado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:19.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Empleado.cs",
               "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Empleado.cs",
               "RelativeDocumentMoniker": "Models\\Empleado.cs",
               "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Empleado.cs",
               "RelativeToolTip": "Models\\Empleado.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADEAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:57:04.778Z"
+              "WhenOpened": "2024-04-23T00:43:41.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Departamento.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Departamento.cs",
-              "RelativeDocumentMoniker": "Models\\Departamento.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Departamento.cs",
-              "RelativeToolTip": "Models\\Departamento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "clsEmpleado.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Clases\\clsEmpleado.cs",
+              "RelativeDocumentMoniker": "Clases\\clsEmpleado.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Clases\\clsEmpleado.cs",
+              "RelativeToolTip": "Clases\\clsEmpleado.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwDoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:56:38.053Z"
+              "WhenOpened": "2024-04-23T00:27:42.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Contrato.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Contrato.cs",
-              "RelativeDocumentMoniker": "Models\\Contrato.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Contrato.cs",
-              "RelativeToolTip": "Models\\Contrato.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:56:22.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Comision.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Comision.cs",
-              "RelativeDocumentMoniker": "Models\\Comision.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Comision.cs",
-              "RelativeToolTip": "Models\\Comision.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:56:20.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADIAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:55:56.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Ciudad.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Ciudad.cs",
-              "RelativeDocumentMoniker": "Models\\Ciudad.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Ciudad.cs",
-              "RelativeToolTip": "Models\\Ciudad.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:55:35.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Arriendo.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Arriendo.cs",
-              "RelativeDocumentMoniker": "Models\\Arriendo.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Models\\Arriendo.cs",
-              "RelativeToolTip": "Models\\Arriendo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:55:19.695Z"
+              "WhenOpened": "2024-04-23T00:27:31.068Z",
+              "EditorCaption": ""
             }
           ]
         }

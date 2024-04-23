@@ -1,6 +1,10 @@
-﻿jQuery(function () {
+﻿var oTabla = $("#tblEmpleados").DataTable();
+jQuery(function () {
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("../Paginas/Menu.html");
+
+    //Llenar la tabla de Empleados
+    LlenarTablaEmpleados();
 
     //Levantar el evento click del boton insertar
     $("#btnInsertar").on("click", () => {
@@ -19,6 +23,10 @@
         Consultar();
     });
 });
+
+async function LlenarTablaEmpleados() {
+    LlenarTablaXServicios("https://localhost:44340/api/Empleados", "#tblEmpleados");
+}
 
 async function Consultar() {
 
@@ -86,6 +94,7 @@ async function EjecutarComando(Comando) {
             });
         //Leer la respuesta y presentarla en el div
         const Resultado = await Respuesta.json();
+        LlenarTablaEmpleados();
         $("#dvMensaje").html(Resultado);
     }
     catch (error) {
