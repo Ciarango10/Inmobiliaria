@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\paginas\\scripts\\comunes\\combos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\comunes\\combos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\paginas\\scripts\\comunes\\tablas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\comunes\\tablas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Combos.js",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Comunes\\Combos.js",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Comunes\\Combos.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T16:29:59.574Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Tablas.js",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Comunes\\Tablas.js",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Comunes\\Tablas.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T16:30:03.477Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
@@ -77,19 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inmueble.js",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Inmueble.js",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Inmueble.js",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAmwKEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T19:23:50.283Z",
-              "EditorCaption": ""
             }
           ]
         }
