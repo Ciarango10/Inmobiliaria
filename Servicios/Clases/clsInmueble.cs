@@ -31,13 +31,14 @@ namespace Servicios.Clases
             {
                 return ex.Message;
             }
+
         }
 
         public string Actualizar()
         {
 
             try
-            {   // Actualizamos la inmueble
+            {   // Actualizamos el inmueble
                 dbInmobiliaria.Inmuebles.AddOrUpdate(inmueble);
                 // Guardamos en la base de datos
                 dbInmobiliaria.SaveChanges();
@@ -48,6 +49,7 @@ namespace Servicios.Clases
             {
                 return ex.Message;
             }
+
         }
 
         public IQueryable ConsultarConTodo()

@@ -22,10 +22,10 @@ namespace Servicios.Controllers
         }
 
         // GET -- Invoca el Consultar con un parametro: IdInmueble
-        public Inmueble Get(int idInmueble)
+        public Inmueble Get(int IdInmueble)
         {
             clsInmueble _inmueble = new clsInmueble();
-            return _inmueble.Consultar(idInmueble);
+            return _inmueble.Consultar(IdInmueble);
         }
 
         [HttpGet]

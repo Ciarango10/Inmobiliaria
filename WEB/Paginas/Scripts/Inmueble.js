@@ -78,7 +78,7 @@ async function LlenarComboTipoInmuebles() {
         $("#cboTipoInmueble").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboTipoInmueble").append('<option value=' + Rpta[i].idTipoInmueble + '>' + Rpta[i].Tipo+ '</option>');
+            $("#cboTipoInmueble").append('<option value=' + Rpta[i].IdTipoInmueble + '>' + Rpta[i].Tipo+ '</option>');
         }
     }
     catch (error) {
@@ -87,10 +87,9 @@ async function LlenarComboTipoInmuebles() {
     }
 }
 
-
 async function Consultar() {
 
-    let idInmueble = $("#txtIdInmueble").val();
+    let IdInmueble = $("#txtIdInmueble").val();
     try {
         const Respuesta = await fetch(`https://localhost:44340/api/Inmuebles?IdInmueble=${IdInmueble}`,
             {
@@ -102,7 +101,6 @@ async function Consultar() {
             });
         //Leer la respuesta y presentarla en el div
         const Resultado = await Respuesta.json();
-        console.log(Resultado);
         //La respuesta se escribe en los campos
         $("#txtDireccion").val(Resultado.Direccion);
         $("#txtPrecio").val(Resultado.Precio);
@@ -163,7 +161,7 @@ async function EjecutarComando(Comando) {
             });
         //Leer la respuesta y presentarla en el div
         const Resultado = await Respuesta.json();
-        LlenarTablaVisitas();
+        LlenarTablaInmuebles();
         $("#dvMensaje").html(Resultado);
     }
     catch (error) {

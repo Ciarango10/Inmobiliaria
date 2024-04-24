@@ -1,50 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\",
+  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\web\\paginas\\inmueble.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\inmueble.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\visita.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\visita.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\visita.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\visita.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\cliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\cliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\cliente.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\cliente.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\comunes\\comunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\comunes\\comunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\comunes\\combos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\scripts\\comunes\\combos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\comunes\\combos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\comunes\\tablas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\web\\paginas\\scripts\\comunes\\tablas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\comunes\\tablas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\empleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\empleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,71 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Combos.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
               "RelativeDocumentMoniker": "Paginas\\Scripts\\Comunes\\Combos.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Combos.js",
               "RelativeToolTip": "Paginas\\Scripts\\Comunes\\Combos.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-23T00:15:40.367Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Comunes.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Comunes.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Comunes\\Comunes.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Comunes.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Comunes\\Comunes.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-23T00:15:41.241Z",
-              "IsPinned": true
+              "WhenOpened": "2024-04-24T16:29:59.574Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Tablas.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
               "RelativeDocumentMoniker": "Paginas\\Scripts\\Comunes\\Tablas.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\WEB\\Paginas\\Scripts\\Comunes\\Tablas.js",
               "RelativeToolTip": "Paginas\\Scripts\\Comunes\\Tablas.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-23T00:39:22.502Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Visita.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Visita.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Visita.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Visita.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Visita.js",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAGUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-23T02:07:53.134Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Visita.html",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Visita.html",
-              "RelativeDocumentMoniker": "Paginas\\Visita.html",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Visita.html",
-              "RelativeToolTip": "Paginas\\Visita.html",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAoAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-23T02:07:22.551Z",
+              "WhenOpened": "2024-04-24T16:30:03.477Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -149,80 +75,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inmueble.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Inmueble.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Inmueble.js",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAowGgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T01:40:48.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cliente.html",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Cliente.html",
-              "RelativeDocumentMoniker": "Paginas\\Cliente.html",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Cliente.html",
-              "RelativeToolTip": "Paginas\\Cliente.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-23T00:55:02.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Inmueble.html",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Inmueble.html",
-              "RelativeDocumentMoniker": "Paginas\\Inmueble.html",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Inmueble.html",
-              "RelativeToolTip": "Paginas\\Inmueble.html",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAADcAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-24T00:31:21.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cliente.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Cliente.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Cliente.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Cliente.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Cliente.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-23T00:54:50.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Empleado.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Empleado.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Empleado.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Empleado.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Empleado.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-17T18:56:09.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Empleado.html",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Empleado.html",
-              "RelativeDocumentMoniker": "Paginas\\Empleado.html",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Empleado.html",
-              "RelativeToolTip": "Paginas\\Empleado.html",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAswGwAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-17T18:55:29.988Z"
             }
           ]
         }
