@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3750e9eaabb544928ab6698741c32c57" Name="Diagram1">
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Arriendo" Width="1.5" PointX="9.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Ciudad" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Cliente" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Comision" Width="1.5" PointX="15" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Contrato" Width="1.5" PointX="12.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Departamento" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Empleado" Width="1.5" PointX="7.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Estado" Width="1.5" PointX="7.5" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.FormaPago" Width="1.5" PointX="7.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Inmueble" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Pais" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Queja" Width="1.5" PointX="9.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.TipoInmueble" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Venta" Width="1.5" PointX="9.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBInmobiliariaModel.Visita" Width="1.5" PointX="9.75" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCliente_Arriendo" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEmpleado_Arriendo" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKFormaPago_Arriendo" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKInmueble_Arriendo" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCiudad_Inmueble" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKDepartamento_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCliente_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCliente_Queja" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCliente_Venta" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKCliente_Visita" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKContrato_Comision" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEmpleado_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKInmueble_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKPais_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEmpleado_Queja" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEmpleado_Venta" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEmpleado_Visita" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKEstado_Queja" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKFormaPago_Venta" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKInmueble_Venta" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKInmueble_Visita" ManuallyRouted="false" />
+        <AssociationConnector Association="DBInmobiliariaModel.FKTipoInmueble_Inmueble" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

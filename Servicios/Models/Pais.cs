@@ -12,22 +12,18 @@ namespace Servicios.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class FormaPago
+    public partial class Pais
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FormaPago()
+        public Pais()
         {
-            this.Arriendo = new HashSet<Arriendo>();
-            this.Venta = new HashSet<Venta>();
+            this.Departamento = new HashSet<Departamento>();
         }
     
-        public int IdFormaPago { get; set; }
-        public string Tipo { get; set; }
-        public string Detalles { get; set; }
+        public int IdPais { get; set; }
+        public string Nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Arriendo> Arriendo { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
+        public virtual ICollection<Departamento> Departamento { get; set; }
     }
 }

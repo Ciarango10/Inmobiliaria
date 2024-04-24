@@ -9,7 +9,6 @@
 
 namespace Servicios.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +17,7 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Contrato()
         {
-            this.Comisions = new HashSet<Comision>();
+            this.Comision = new HashSet<Comision>();
         }
     
         public int IdContrato { get; set; }
@@ -30,10 +29,8 @@ namespace Servicios.Models
         public Nullable<int> Id_Inmueble { get; set; }
     
         public virtual Cliente Cliente { get; set; }
-
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comision> Comisions { get; set; }
+        public virtual ICollection<Comision> Comision { get; set; }
         public virtual Empleado Empleado { get; set; }
         public virtual Inmueble Inmueble { get; set; }
     }

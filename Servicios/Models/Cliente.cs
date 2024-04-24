@@ -9,7 +9,6 @@
 
 namespace Servicios.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,11 +17,11 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cliente()
         {
-            this.Arriendoes = new HashSet<Arriendo>();
-            this.Contratoes = new HashSet<Contrato>();
-            this.Quejas = new HashSet<Queja>();
-            this.Ventas = new HashSet<Venta>();
-            this.Visitas = new HashSet<Visita>();
+            this.Arriendo = new HashSet<Arriendo>();
+            this.Contrato = new HashSet<Contrato>();
+            this.Queja = new HashSet<Queja>();
+            this.Venta = new HashSet<Venta>();
+            this.Visita = new HashSet<Visita>();
         }
     
         public string Documento { get; set; }
@@ -31,25 +30,16 @@ namespace Servicios.Models
         public string Email { get; set; }
         public string Telefono { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
-
-        [JsonIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Arriendo> Arriendoes { get; set; }
-
-        [JsonIgnore]
+        public virtual ICollection<Arriendo> Arriendo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Contrato> Contratoes { get; set; }
-
-        [JsonIgnore]
+        public virtual ICollection<Contrato> Contrato { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Queja> Quejas { get; set; }
-
-        [JsonIgnore]
+        public virtual ICollection<Queja> Queja { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
-
-        [JsonIgnore]
+        public virtual ICollection<Venta> Venta { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Visita> Visitas { get; set; }
+        public virtual ICollection<Visita> Visita { get; set; }
     }
 }

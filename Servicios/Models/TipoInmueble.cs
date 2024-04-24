@@ -9,7 +9,6 @@
 
 namespace Servicios.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,14 +17,13 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoInmueble()
         {
-            this.Inmuebles = new HashSet<Inmueble>();
+            this.Inmueble = new HashSet<Inmueble>();
         }
     
         public int IdTipoInmueble { get; set; }
         public string Tipo { get; set; }
-
-        [JsonIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Inmueble> Inmuebles { get; set; }
+        public virtual ICollection<Inmueble> Inmueble { get; set; }
     }
 }
