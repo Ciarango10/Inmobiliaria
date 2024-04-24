@@ -11,6 +11,7 @@ using System.Web.Http.Cors;
 namespace Servicios.Controllers
 {
     [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
+
     public class InmueblesController : ApiController
     {
         // GET api/<controller>
@@ -20,25 +21,44 @@ namespace Servicios.Controllers
             return _inmueble.ConsultarTodos();
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        // GET -- Invoca el Consultar con un parametro: IdInmueble
+        public Inmueble Get(int idInmueble)
         {
-            return "value";
+            clsInmueble _inmueble = new clsInmueble();
+            return _inmueble.Consultar(idInmueble);
         }
 
-        // POST api/<controller>
-        public void Post([FromBody] string value)
+        [HttpGet]
+        [Route("api/Inmuebles/ConsultarConTodo")]
+        public IQueryable ConsultarConTodo()
         {
+            clsInmueble _inmueble = new clsInmueble();
+            return _inmueble.ConsultarConTodo();
         }
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody] string value)
+        // POST -- Invoca el método insertar 
+        public string Post([FromBody] Inmueble inmueble)
         {
+            clsInmueble _inmueble = new clsInmueble();
+            _inmueble.inmueble = inmueble;
+            return _inmueble.Insertar();
         }
 
-        // DELETE api/<controller>/5
-        public void Delete(int id)
+        // PUT -- Invoca el metodo Actualizar
+        public string Put([FromBody] Inmueble inmueble)
         {
+            clsInmueble _inmueble = new clsInmueble();
+            _inmueble.inmueble = inmueble;
+            return _inmueble.Actualizar();
+
+        }
+
+        // DELETE -- Invoca el metodo Eliminar
+        public string Delete([FromBody] Inmueble inmueble)
+        {
+            clsInmueble _inmueble = new clsInmueble();
+            _inmueble.inmueble = inmueble;
+            return _inmueble.Eliminar();
         }
     }
 }

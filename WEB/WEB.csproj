@@ -166,6 +166,7 @@
     <Content Include="Paginas\Scripts\Cliente.js" />
     <Content Include="Paginas\Scripts\Comunes\Combos.js" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
+    <Content Include="Paginas\Scripts\Inmueble.js" />
     <Content Include="Paginas\Scripts\Comunes\Tablas.js" />
     <Content Include="Paginas\Scripts\Empleado.js" />
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -198,6 +199,7 @@
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.ttf" />
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.woff" />
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.woff2" />
+    <Content Include="Paginas\Inmueble.html" />
     <Content Include="Paginas\Scripts\Visita.js" />
     <Content Include="Paginas\Visita.html" />
     <Content Include="Scripts\adminlte.js" />
