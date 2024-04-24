@@ -9,6 +9,7 @@
 
 namespace Servicios.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -17,10 +18,10 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Inmueble()
         {
-            this.Arriendo = new HashSet<Arriendo>();
-            this.Contrato = new HashSet<Contrato>();
-            this.Venta = new HashSet<Venta>();
-            this.Visita = new HashSet<Visita>();
+            this.Arriendoes = new HashSet<Arriendo>();
+            this.Contratoes = new HashSet<Contrato>();
+            this.Ventas = new HashSet<Venta>();
+            this.Visitas = new HashSet<Visita>();
         }
     
         public int IdInmueble { get; set; }
@@ -28,16 +29,23 @@ namespace Servicios.Models
         public double Precio { get; set; }
         public Nullable<int> Id_Ciudad { get; set; }
         public Nullable<int> Id_TipoInmueble { get; set; }
-    
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Arriendo> Arriendo { get; set; }
+        public virtual ICollection<Arriendo> Arriendoes { get; set; }
         public virtual Ciudad Ciudad { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Contrato> Contrato { get; set; }
+        public virtual ICollection<Contrato> Contratoes { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
+        public virtual ICollection<Venta> Ventas { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Visita> Visita { get; set; }
+        public virtual ICollection<Visita> Visitas { get; set; }
         public virtual TipoInmueble TipoInmueble { get; set; }
     }
 }

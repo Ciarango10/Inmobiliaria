@@ -199,64 +199,64 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Arriendo.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ciudad.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comision.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contrato.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Departamento.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Estado.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FormaPago.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Inmobiliaria.Context.cs">
+    <Compile Include="Models\InmobiliariaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Inmobiliaria.Context.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Inmobiliaria.cs">
+    <Compile Include="Models\InmobiliariaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Inmobiliaria.Designer.cs">
+    <Compile Include="Models\InmobiliariaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Inmobiliaria.edmx</DependentUpon>
+      <DependentUpon>InmobiliariaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Inmueble.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Pais.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+    <Compile Include="Models\Pai.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Queja.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoInmueble.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Visita.cs">
-      <DependentUpon>Inmobiliaria.tt</DependentUpon>
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -280,15 +280,15 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Inmobiliaria.Context.tt">
+    <Content Include="Models\InmobiliariaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Inmobiliaria.edmx</DependentUpon>
-      <LastGenOutput>Inmobiliaria.Context.cs</LastGenOutput>
+      <DependentUpon>InmobiliariaModel.edmx</DependentUpon>
+      <LastGenOutput>InmobiliariaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Inmobiliaria.tt">
+    <Content Include="Models\InmobiliariaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Inmobiliaria.edmx</DependentUpon>
-      <LastGenOutput>Inmobiliaria.cs</LastGenOutput>
+      <DependentUpon>InmobiliariaModel.edmx</DependentUpon>
+      <LastGenOutput>InmobiliariaModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -315,12 +315,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\Inmobiliaria.edmx">
+    <EntityDeploy Include="Models\InmobiliariaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Inmobiliaria.Designer.cs</LastGenOutput>
+      <LastGenOutput>InmobiliariaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Inmobiliaria.edmx.diagram">
-      <DependentUpon>Inmobiliaria.edmx</DependentUpon>
+    <Content Include="Models\InmobiliariaModel.edmx.diagram">
+      <DependentUpon>InmobiliariaModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

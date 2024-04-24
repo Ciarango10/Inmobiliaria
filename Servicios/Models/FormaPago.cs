@@ -9,6 +9,7 @@
 
 namespace Servicios.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -17,17 +18,20 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FormaPago()
         {
-            this.Arriendo = new HashSet<Arriendo>();
-            this.Venta = new HashSet<Venta>();
+            this.Arriendoes = new HashSet<Arriendo>();
+            this.Ventas = new HashSet<Venta>();
         }
     
         public int IdFormaPago { get; set; }
         public string Tipo { get; set; }
         public string Detalles { get; set; }
-    
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Arriendo> Arriendo { get; set; }
+        public virtual ICollection<Arriendo> Arriendoes { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
+        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

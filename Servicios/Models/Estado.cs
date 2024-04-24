@@ -9,6 +9,7 @@
 
 namespace Servicios.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -17,14 +18,15 @@ namespace Servicios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Estado()
         {
-            this.Queja = new HashSet<Queja>();
+            this.Quejas = new HashSet<Queja>();
         }
     
         public int IdEstado { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-    
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Queja> Queja { get; set; }
+        public virtual ICollection<Queja> Quejas { get; set; }
     }
 }
