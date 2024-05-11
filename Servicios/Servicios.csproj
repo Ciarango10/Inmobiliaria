@@ -201,6 +201,9 @@
     <Compile Include="Models\Arriendo.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cargo.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Ciudad.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
@@ -217,6 +220,9 @@
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpleadoCargo.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Estado.cs">

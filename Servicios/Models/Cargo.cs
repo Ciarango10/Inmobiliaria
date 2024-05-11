@@ -13,19 +13,20 @@ namespace Servicios.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Pai
+    public partial class Cargo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pai()
+        public Cargo()
         {
-            this.Departamentoes = new HashSet<Departamento>();
+            this.EmpleadoCargoes = new HashSet<EmpleadoCargo>();
         }
     
-        public int IdPais { get; set; }
+        public int Codigo { get; set; }
         public string Nombre { get; set; }
+        public int Salario { get; set; }
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Departamento> Departamentoes { get; set; }
+        public virtual ICollection<EmpleadoCargo> EmpleadoCargoes { get; set; }
     }
 }

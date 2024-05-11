@@ -108,6 +108,7 @@ async function LlenarComboInmuebles() {
         for (i = 0; i < Rpta.length; i++) {
             $(cboInmueble).append('<option value=' + Rpta[i].IdInmueble + '>' + Rpta[i].Direccion + '</option>');
         }
+        console.log(Rpta);
     }
     catch (error) {
         //Se presenta la respuesta en el div mensaje

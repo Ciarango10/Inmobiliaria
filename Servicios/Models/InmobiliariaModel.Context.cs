@@ -26,12 +26,14 @@ namespace Servicios.Models
         }
     
         public virtual DbSet<Arriendo> Arriendoes { get; set; }
+        public virtual DbSet<Cargo> Cargoes { get; set; }
         public virtual DbSet<Ciudad> Ciudads { get; set; }
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Comision> Comisions { get; set; }
         public virtual DbSet<Contrato> Contratoes { get; set; }
         public virtual DbSet<Departamento> Departamentoes { get; set; }
         public virtual DbSet<Empleado> Empleadoes { get; set; }
+        public virtual DbSet<EmpleadoCargo> EmpleadoCargoes { get; set; }
         public virtual DbSet<Estado> Estadoes { get; set; }
         public virtual DbSet<FormaPago> FormaPagoes { get; set; }
         public virtual DbSet<Inmueble> Inmuebles { get; set; }

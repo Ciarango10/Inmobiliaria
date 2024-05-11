@@ -18,6 +18,14 @@
           <Property Name="Id_Inmueble" Type="int" />
           <Property Name="Id_FormaPago" Type="int" />
         </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salario" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Ciudad">
           <Key>
             <PropertyRef Name="IdCiudad" />
@@ -32,7 +40,9 @@
           </Key>
           <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrimerApellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoApellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="20" />
           <Property Name="FechaNacimiento" Type="date" />
@@ -72,10 +82,22 @@
           </Key>
           <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrimerApellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoApellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="20" />
           <Property Name="FechaNacimiento" Type="date" />
+        </EntityType>
+        <EntityType Name="EmpleadoCargo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" Nullable="false" />
+          <Property Name="FechaInicio" Type="date" />
+          <Property Name="FechaFin" Type="date" />
+          <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
+          <Property Name="Codigo_Cargo" Type="int" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -100,6 +122,12 @@
           <Property Name="IdInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Direccion" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Precio" Type="float" Nullable="false" />
+          <Property Name="Area" Type="float" Nullable="false" />
+          <Property Name="NroHabitaciones" Type="int" Nullable="false" />
+          <Property Name="NroBaños" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Caracteristicas" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FechaPublicacion" Type="date" />
           <Property Name="Id_Ciudad" Type="int" />
           <Property Name="Id_TipoInmueble" Type="int" />
         </EntityType>
@@ -151,6 +179,18 @@
           <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
           <Property Name="Id_Inmueble" Type="int" />
         </EntityType>
+        <Association Name="FKCargo_EmpleadoCargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="EmpleadoCargo">
+              <PropertyRef Name="Codigo_Cargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FKCiudad_Inmueble">
           <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
           <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="*" />
@@ -267,6 +307,18 @@
               <PropertyRef Name="Documento" />
             </Principal>
             <Dependent Role="Contrato">
+              <PropertyRef Name="Documento_Empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKEmpleado_EmpleadoCargo">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+          <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="Documento" />
+            </Principal>
+            <Dependent Role="EmpleadoCargo">
               <PropertyRef Name="Documento_Empleado" />
             </Dependent>
           </ReferentialConstraint>
@@ -417,12 +469,14 @@
         </Association>
         <EntityContainer Name="DBInmobiliariaModelStoreContainer">
           <EntitySet Name="Arriendo" EntityType="Self.Arriendo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comision" EntityType="Self.Comision" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmpleadoCargo" EntityType="Self.EmpleadoCargo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FormaPago" EntityType="Self.FormaPago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Inmueble" EntityType="Self.Inmueble" Schema="dbo" store:Type="Tables" />
@@ -431,6 +485,10 @@
           <EntitySet Name="TipoInmueble" EntityType="Self.TipoInmueble" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Visita" EntityType="Self.Visita" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FKCargo_EmpleadoCargo" Association="Self.FKCargo_EmpleadoCargo">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="EmpleadoCargo" EntitySet="EmpleadoCargo" />
+          </AssociationSet>
           <AssociationSet Name="FKCiudad_Inmueble" Association="Self.FKCiudad_Inmueble">
             <End Role="Ciudad" EntitySet="Ciudad" />
             <End Role="Inmueble" EntitySet="Inmueble" />
@@ -470,6 +528,10 @@
           <AssociationSet Name="FKEmpleado_Contrato" Association="Self.FKEmpleado_Contrato">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Contrato" EntitySet="Contrato" />
+          </AssociationSet>
+          <AssociationSet Name="FKEmpleado_EmpleadoCargo" Association="Self.FKEmpleado_EmpleadoCargo">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="EmpleadoCargo" EntitySet="EmpleadoCargo" />
           </AssociationSet>
           <AssociationSet Name="FKEmpleado_Queja" Association="Self.FKEmpleado_Queja">
             <End Role="Empleado" EntitySet="Empleado" />
@@ -542,6 +604,15 @@
           <NavigationProperty Name="FormaPago" Relationship="Self.FKFormaPago_Arriendo" FromRole="Arriendo" ToRole="FormaPago" />
           <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Arriendo" FromRole="Arriendo" ToRole="Inmueble" />
         </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmpleadoCargoes" Relationship="Self.FKCargo_EmpleadoCargo" FromRole="Cargo" ToRole="EmpleadoCargo" />
+        </EntityType>
         <EntityType Name="Ciudad">
           <Key>
             <PropertyRef Name="IdCiudad" />
@@ -558,7 +629,9 @@
           </Key>
           <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
@@ -610,15 +683,30 @@
           </Key>
           <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKEmpleado_Arriendo" FromRole="Empleado" ToRole="Arriendo" />
           <NavigationProperty Name="Contratoes" Relationship="Self.FKEmpleado_Contrato" FromRole="Empleado" ToRole="Contrato" />
+          <NavigationProperty Name="EmpleadoCargoes" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="Empleado" ToRole="EmpleadoCargo" />
           <NavigationProperty Name="Quejas" Relationship="Self.FKEmpleado_Queja" FromRole="Empleado" ToRole="Queja" />
           <NavigationProperty Name="Ventas" Relationship="Self.FKEmpleado_Venta" FromRole="Empleado" ToRole="Venta" />
           <NavigationProperty Name="Visitas" Relationship="Self.FKEmpleado_Visita" FromRole="Empleado" ToRole="Visita" />
+        </EntityType>
+        <EntityType Name="EmpleadoCargo">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+          <Property Name="FechaFin" Type="DateTime" Precision="0" />
+          <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo_Cargo" Type="Int32" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FKCargo_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Cargo" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -646,6 +734,12 @@
           <Property Name="IdInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Precio" Type="Double" Nullable="false" />
+          <Property Name="Area" Type="Double" Nullable="false" />
+          <Property Name="NroHabitaciones" Type="Int32" Nullable="false" />
+          <Property Name="NroBaños" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Caracteristicas" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaPublicacion" Type="DateTime" Precision="0" />
           <Property Name="Id_Ciudad" Type="Int32" />
           <Property Name="Id_TipoInmueble" Type="Int32" />
           <NavigationProperty Name="Arriendoes" Relationship="Self.FKInmueble_Arriendo" FromRole="Inmueble" ToRole="Arriendo" />
@@ -760,6 +854,18 @@
             </Principal>
             <Dependent Role="Arriendo">
               <PropertyRef Name="Id_Inmueble" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCargo_EmpleadoCargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="EmpleadoCargo">
+              <PropertyRef Name="Codigo_Cargo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -883,6 +989,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FKEmpleado_EmpleadoCargo">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+          <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="Documento" />
+            </Principal>
+            <Dependent Role="EmpleadoCargo">
+              <PropertyRef Name="Documento_Empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FKEmpleado_Queja">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
@@ -981,12 +1099,14 @@
         </Association>
         <EntityContainer Name="DBInmobiliariaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Arriendoes" EntityType="Self.Arriendo" />
+          <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
           <EntitySet Name="Ciudads" EntityType="Self.Ciudad" />
           <EntitySet Name="Clientes" EntityType="Self.Cliente" />
           <EntitySet Name="Comisions" EntityType="Self.Comision" />
           <EntitySet Name="Contratoes" EntityType="Self.Contrato" />
           <EntitySet Name="Departamentoes" EntityType="Self.Departamento" />
           <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
+          <EntitySet Name="EmpleadoCargoes" EntityType="Self.EmpleadoCargo" />
           <EntitySet Name="Estadoes" EntityType="Self.Estado" />
           <EntitySet Name="FormaPagoes" EntityType="Self.FormaPago" />
           <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
@@ -1010,6 +1130,10 @@
           <AssociationSet Name="FKInmueble_Arriendo" Association="Self.FKInmueble_Arriendo">
             <End Role="Inmueble" EntitySet="Inmuebles" />
             <End Role="Arriendo" EntitySet="Arriendoes" />
+          </AssociationSet>
+          <AssociationSet Name="FKCargo_EmpleadoCargo" Association="Self.FKCargo_EmpleadoCargo">
+            <End Role="Cargo" EntitySet="Cargoes" />
+            <End Role="EmpleadoCargo" EntitySet="EmpleadoCargoes" />
           </AssociationSet>
           <AssociationSet Name="FKCiudad_Inmueble" Association="Self.FKCiudad_Inmueble">
             <End Role="Ciudad" EntitySet="Ciudads" />
@@ -1050,6 +1174,10 @@
           <AssociationSet Name="FKPais_Departamento" Association="Self.FKPais_Departamento">
             <End Role="Pais" EntitySet="Pais" />
             <End Role="Departamento" EntitySet="Departamentoes" />
+          </AssociationSet>
+          <AssociationSet Name="FKEmpleado_EmpleadoCargo" Association="Self.FKEmpleado_EmpleadoCargo">
+            <End Role="Empleado" EntitySet="Empleadoes" />
+            <End Role="EmpleadoCargo" EntitySet="EmpleadoCargoes" />
           </AssociationSet>
           <AssociationSet Name="FKEmpleado_Queja" Association="Self.FKEmpleado_Queja">
             <End Role="Empleado" EntitySet="Empleadoes" />
@@ -1104,6 +1232,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Cargoes">
+            <EntityTypeMapping TypeName="DBInmobiliariaModel.Cargo">
+              <MappingFragment StoreEntitySet="Cargo">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Ciudads">
             <EntityTypeMapping TypeName="DBInmobiliariaModel.Ciudad">
               <MappingFragment StoreEntitySet="Ciudad">
@@ -1118,7 +1255,9 @@
               <MappingFragment StoreEntitySet="Cliente">
                 <ScalarProperty Name="Documento" ColumnName="Documento" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
@@ -1162,10 +1301,23 @@
               <MappingFragment StoreEntitySet="Empleado">
                 <ScalarProperty Name="Documento" ColumnName="Documento" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpleadoCargoes">
+            <EntityTypeMapping TypeName="DBInmobiliariaModel.EmpleadoCargo">
+              <MappingFragment StoreEntitySet="EmpleadoCargo">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
+                <ScalarProperty Name="Codigo_Cargo" ColumnName="Codigo_Cargo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1193,6 +1345,12 @@
                 <ScalarProperty Name="IdInmueble" ColumnName="IdInmueble" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="NroHabitaciones" ColumnName="NroHabitaciones" />
+                <ScalarProperty Name="NroBaños" ColumnName="NroBaños" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+                <ScalarProperty Name="FechaPublicacion" ColumnName="FechaPublicacion" />
                 <ScalarProperty Name="Id_Ciudad" ColumnName="Id_Ciudad" />
                 <ScalarProperty Name="Id_TipoInmueble" ColumnName="Id_TipoInmueble" />
               </MappingFragment>

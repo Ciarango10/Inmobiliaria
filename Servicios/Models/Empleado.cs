@@ -20,6 +20,7 @@ namespace Servicios.Models
         {
             this.Arriendoes = new HashSet<Arriendo>();
             this.Contratoes = new HashSet<Contrato>();
+            this.EmpleadoCargoes = new HashSet<EmpleadoCargo>();
             this.Quejas = new HashSet<Queja>();
             this.Ventas = new HashSet<Venta>();
             this.Visitas = new HashSet<Visita>();
@@ -27,7 +28,9 @@ namespace Servicios.Models
     
         public string Documento { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string Direccion { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
@@ -39,6 +42,10 @@ namespace Servicios.Models
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contrato> Contratoes { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EmpleadoCargo> EmpleadoCargoes { get; set; }
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

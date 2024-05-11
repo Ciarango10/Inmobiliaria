@@ -1,9 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\",
+  "WorkspaceRootPath": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmueble\\servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\tipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\tipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\queja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\queja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\inmobiliariamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\inmobiliariamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\inmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\inmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\empleadocargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\empleadocargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\contrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\models\\arriendo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:models\\arriendo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\clases\\clstipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clstipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\clases\\clsinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\clases\\clsvisita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsvisita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\servicios\\controllers\\ciudadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:controllers\\ciudadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -14,8 +102,242 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Visita.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Visita.cs",
+              "RelativeDocumentMoniker": "Models\\Visita.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Visita.cs",
+              "RelativeToolTip": "Models\\Visita.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:58:53.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "Models\\Venta.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Venta.cs",
+              "RelativeToolTip": "Models\\Venta.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAswB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:58:48.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TipoInmueble.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\TipoInmueble.cs",
+              "RelativeDocumentMoniker": "Models\\TipoInmueble.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\TipoInmueble.cs",
+              "RelativeToolTip": "Models\\TipoInmueble.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAgwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:58:35.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Queja.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Queja.cs",
+              "RelativeDocumentMoniker": "Models\\Queja.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Queja.cs",
+              "RelativeToolTip": "Models\\Queja.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:58:26.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pai.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Pai.cs",
+              "RelativeDocumentMoniker": "Models\\Pai.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Pai.cs",
+              "RelativeToolTip": "Models\\Pai.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwB4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:58:05.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InmobiliariaModel.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\InmobiliariaModel.cs",
+              "RelativeDocumentMoniker": "Models\\InmobiliariaModel.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\InmobiliariaModel.cs",
+              "RelativeToolTip": "Models\\InmobiliariaModel.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:57:39.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Inmueble.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Inmueble.cs",
+              "RelativeDocumentMoniker": "Models\\Inmueble.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Inmueble.cs",
+              "RelativeToolTip": "Models\\Inmueble.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:57:10.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormaPago.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\FormaPago.cs",
+              "RelativeDocumentMoniker": "Models\\FormaPago.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\FormaPago.cs",
+              "RelativeToolTip": "Models\\FormaPago.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:56:04.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Estado.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Estado.cs",
+              "RelativeDocumentMoniker": "Models\\Estado.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Estado.cs",
+              "RelativeToolTip": "Models\\Estado.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:55:52.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "Models\\Empleado.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Empleado.cs",
+              "RelativeToolTip": "Models\\Empleado.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAQwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:55:03.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Departamento.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Departamento.cs",
+              "RelativeDocumentMoniker": "Models\\Departamento.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Departamento.cs",
+              "RelativeToolTip": "Models\\Departamento.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:54:48.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Contrato.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Contrato.cs",
+              "RelativeDocumentMoniker": "Models\\Contrato.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Contrato.cs",
+              "RelativeToolTip": "Models\\Contrato.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvyIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:54:18.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Comision.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Comision.cs",
+              "RelativeDocumentMoniker": "Models\\Comision.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Comision.cs",
+              "RelativeToolTip": "Models\\Comision.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:54:09.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:51:47.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Ciudad.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Ciudad.cs",
+              "RelativeDocumentMoniker": "Models\\Ciudad.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Ciudad.cs",
+              "RelativeToolTip": "Models\\Ciudad.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:51:22.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmpleadoCargo.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\EmpleadoCargo.cs",
+              "RelativeDocumentMoniker": "Models\\EmpleadoCargo.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\EmpleadoCargo.cs",
+              "RelativeToolTip": "Models\\EmpleadoCargo.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:51:19.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Cargo.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Cargo.cs",
+              "RelativeDocumentMoniker": "Models\\Cargo.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Cargo.cs",
+              "RelativeToolTip": "Models\\Cargo.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:49:12.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Arriendo.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Arriendo.cs",
+              "RelativeDocumentMoniker": "Models\\Arriendo.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Models\\Arriendo.cs",
+              "RelativeToolTip": "Models\\Arriendo.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:48:53.993Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
@@ -46,13 +368,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 18,
+              "Title": "clsTipoInmueble.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsTipoInmueble.cs",
+              "RelativeDocumentMoniker": "Clases\\clsTipoInmueble.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsTipoInmueble.cs",
+              "RelativeToolTip": "Clases\\clsTipoInmueble.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:16:13.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "clsInmueble.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsInmueble.cs",
+              "RelativeDocumentMoniker": "Clases\\clsInmueble.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsInmueble.cs",
+              "RelativeToolTip": "Clases\\clsInmueble.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAIwFQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:15:38.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "clsVisita.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsVisita.cs",
+              "RelativeDocumentMoniker": "Clases\\clsVisita.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Clases\\clsVisita.cs",
+              "RelativeToolTip": "Clases\\clsVisita.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwC0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T22:15:18.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CiudadesController.cs",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Controllers\\CiudadesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CiudadesController.cs",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Controllers\\CiudadesController.cs",
+              "RelativeToolTip": "Controllers\\CiudadesController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAUwCwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T21:21:39.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Web.config",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Web.config",
+              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmueble\\Servicios\\Web.config",
+              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\Servicios\\Web.config",
               "RelativeToolTip": "Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAASAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAEsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-04-24T20:46:34.699Z",
               "EditorCaption": ""
