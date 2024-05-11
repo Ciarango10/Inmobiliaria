@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\visita.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\web\\paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Paginas\\Scripts\\Visita.js",
               "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Visita.js",
               "RelativeToolTip": "Paginas\\Scripts\\Visita.js",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAmwG8AAAAFAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAKIAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-05-11T22:25:33.59Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Paginas\\Scripts\\Inmueble.js",
               "ViewState": "AQIAAF4AAAAAAAAAAAAAAGwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T23:07:52.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T23:07:52.386Z"
             },
             {
               "$type": "Document",

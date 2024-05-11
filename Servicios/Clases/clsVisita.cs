@@ -66,8 +66,8 @@ namespace Servicios.Clases
                        IdVisita = V.IdVisita,
                        Comentarios = V.Comentarios,
                        Fecha = V.Fecha,
-                       Empleado = E.Nombre + " "  + E.Apellido,
-                       Cliente = C.Nombre + " " + C.Apellido,
+                       Empleado = E.Nombre + " "  + E.PrimerApellido,
+                       Cliente = C.Nombre + " " + C.PrimerApellido,
                        Inmueble = I.Direccion
                    };
         }

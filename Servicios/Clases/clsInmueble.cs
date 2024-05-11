@@ -64,6 +64,12 @@ namespace Servicios.Clases
                        IdInmueble = I.IdInmueble,
                        Direccion = I.Direccion,
                        Precio = I.Precio,
+                       Area = I.Area,
+                       NroHabitaciones = I.NroHabitaciones,
+                       NroBaños = I.NroBaños,
+                       Estado = I.Estado,
+                       Caracteristicas = I.Caracteristicas,
+                       FechaPublicacion = I.FechaPublicacion,
                        TipoInmueble = T.Tipo,
                        Ciudad = C.Nombre 
                    };
