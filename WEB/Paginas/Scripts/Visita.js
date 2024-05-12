@@ -13,7 +13,7 @@ jQuery(function () {
     LlenarComboClientes();
 
     //Llenar el combo de Inmuebles
-    LlenarComboInmuebles();
+    LlenarComboInmuebles()
 
     //Levantar el evento click del boton insertar
     $("#btnInsertar").on("click", () => {
@@ -54,7 +54,7 @@ async function LlenarComboEmpleados() {
         $("#cboEmpleado").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboEmpleado").append('<option value=' + Rpta[i].Documento + '>' + Rpta[i].Nombre + " " + Rpta[i].Apellido + '</option>');
+            $("#cboEmpleado").append('<option value=' + Rpta[i].Documento + '>' + Rpta[i].Nombre + " " + Rpta[i].PrimerApellido + '</option>');
         }
     }
     catch (error) {
@@ -80,7 +80,7 @@ async function LlenarComboClientes() {
         $("#cboCliente").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboCliente").append('<option value=' + Rpta[i].Documento + '>' + Rpta[i].Nombre + " " + Rpta[i].Apellido + '</option>');
+            $("#cboCliente").append('<option value=' + Rpta[i].Documento + '>' + Rpta[i].Nombre + " " + Rpta[i].PrimerApellido + '</option>');
         }
     }
     catch (error) {
@@ -108,7 +108,37 @@ async function LlenarComboInmuebles() {
         for (i = 0; i < Rpta.length; i++) {
             $(cboInmueble).append('<option value=' + Rpta[i].IdInmueble + '>' + Rpta[i].Direccion + '</option>');
         }
-        console.log(Rpta);
+
+        $("#cboInmueble").change(function () {
+            // Obtenemos la opcion seleccionada
+            var selectedOption = $(this).children("option:selected").val();
+
+            // Encontramos el objeto en el data
+            var selectedObject = Rpta.find(obj => obj.IdInmueble == selectedOption);
+
+            // Actualizamos el valor de los inputs
+            if (selectedObject) {
+                $("#txtTipoInmueble").val(selectedObject.TipoInmueble.Tipo);
+                $("#txtCiudad").val(selectedObject.Ciudad.Nombre);
+                $("#txtPrecio").val(selectedObject.Precio);
+                $("#txtArea").val(selectedObject.Area);
+                $("#txtNroHabitaciones").val(selectedObject.NroHabitaciones);
+                $("#txtNroBaños").val(selectedObject.NroBaños);
+                $("#txtCaracteristicas").val(selectedObject.Caracteristicas);
+            } else {
+                // Si ningun objeto esta seleccionado se limpian los inputs
+                $("#txtTipoInmueble").val("");
+                $("#txtCiudad").val("");
+                $("#txtPrecio").val("");
+                $("#txtArea").val("");
+                $("#txtNroHabitaciones").val("");
+                $("#txtNroBaños").val("");
+                $("#txtCaracteristicas").val("");
+            }
+        });
+
+        // Disparar manualmente el evento change
+        $("#cboInmueble").trigger('change');
     }
     catch (error) {
         //Se presenta la respuesta en el div mensaje
@@ -136,6 +166,9 @@ async function Consultar() {
         $("#cboCliente").val(parseInt(Resultado.Documento_Cliente));
         $("#cboEmpleado").val(parseInt(Resultado.Documento_Empleado));
         $("#cboInmueble").val(Resultado.Id_Inmueble);
+
+        // Disparar manualmente el evento change
+        $("#cboInmueble").trigger('change');
     }
     catch (error) {
         $("#dvMensaje").html(error);

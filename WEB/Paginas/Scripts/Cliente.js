@@ -44,7 +44,9 @@ async function Consultar() {
         const Resultado = await Respuesta.json();
         //La respuesta se escribe en los campos
         $("#txtNombre").val(Resultado.Nombre);
-        $("#txtApellido").val(Resultado.Apellido);
+        $("#txtPrimerApellido").val(Resultado.PrimerApellido);
+        $("#txtSegundoApellido").val(Resultado.SegundoApellido);
+        $("#txtDireccion").val(Resultado.Direccion);
         $("#txtEmail").val(Resultado.Email);
         $("#txtTelefono").val(Resultado.Telefono);
         $("#dtFechaNacimiento").val(new Date(Resultado.FechaNacimiento).toISOString().split('T')[0]);
@@ -60,7 +62,9 @@ async function EjecutarComando(Comando) {
     //Capturar los datos de entrada
     let Documento = $("#txtDocumento").val();
     let Nombre = $("#txtNombre").val();
-    let Apellido = $("#txtApellido").val();
+    let PrimerApellido = $("#txtPrimerApellido").val();
+    let SegundoApellido = $("#txtSegundoApellido").val();
+    let Direccion = $("#txtDireccion").val();
     let Email = $("#txtEmail").val();
     let Telefono = $("#txtTelefono").val();
     let FechaNacimiento = $("#dtFechaNacimiento").val();
@@ -69,10 +73,12 @@ async function EjecutarComando(Comando) {
     let DatosCliente = {
         Documento: Documento,
         Nombre: Nombre,
-        Apellido: Apellido,
+        PrimerApellido: PrimerApellido,
+        SegundoApellido: SegundoApellido,
+        Direccion: Direccion,
         Email: Email,
         Telefono: Telefono,
-        FechaNacimiento: FechaNacimiento,
+        FechaNacimiento: FechaNacimiento
     }
 
     //Invocar la función fetch para grabar en la base de datos, a través del servicio

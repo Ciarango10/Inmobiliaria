@@ -17,6 +17,15 @@
     <NavigationProperty Name="FormaPago" Relationship="Self.FKFormaPago_Arriendo" FromRole="Arriendo" ToRole="FormaPago" />
     <NavigationProperty Name="Inmueble" Relationship="Self.FKInmueble_Arriendo" FromRole="Arriendo" ToRole="Inmueble" />
   </EntityType>
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Salario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EmpleadoCargoes" Relationship="Self.FKCargo_EmpleadoCargo" FromRole="Cargo" ToRole="EmpleadoCargo" />
+  </EntityType>
   <EntityType Name="Ciudad">
     <Key>
       <PropertyRef Name="IdCiudad" />
@@ -33,7 +42,9 @@
     </Key>
     <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
@@ -85,15 +96,30 @@
     </Key>
     <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Arriendoes" Relationship="Self.FKEmpleado_Arriendo" FromRole="Empleado" ToRole="Arriendo" />
     <NavigationProperty Name="Contratoes" Relationship="Self.FKEmpleado_Contrato" FromRole="Empleado" ToRole="Contrato" />
+    <NavigationProperty Name="EmpleadoCargoes" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="Empleado" ToRole="EmpleadoCargo" />
     <NavigationProperty Name="Quejas" Relationship="Self.FKEmpleado_Queja" FromRole="Empleado" ToRole="Queja" />
     <NavigationProperty Name="Ventas" Relationship="Self.FKEmpleado_Venta" FromRole="Empleado" ToRole="Venta" />
     <NavigationProperty Name="Visitas" Relationship="Self.FKEmpleado_Visita" FromRole="Empleado" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="EmpleadoCargo">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+    <Property Name="FechaFin" Type="DateTime" Precision="0" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Codigo_Cargo" Type="Int32" />
+    <NavigationProperty Name="Cargo" Relationship="Self.FKCargo_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Cargo" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Empleado" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
@@ -121,6 +147,12 @@
     <Property Name="IdInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Precio" Type="Double" Nullable="false" />
+    <Property Name="Area" Type="Double" Nullable="false" />
+    <Property Name="NroHabitaciones" Type="Int32" Nullable="false" />
+    <Property Name="NroBaños" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Caracteristicas" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaPublicacion" Type="DateTime" Precision="0" />
     <Property Name="Id_Ciudad" Type="Int32" />
     <Property Name="Id_TipoInmueble" Type="Int32" />
     <NavigationProperty Name="Arriendoes" Relationship="Self.FKInmueble_Arriendo" FromRole="Inmueble" ToRole="Arriendo" />
@@ -235,6 +267,18 @@
       </Principal>
       <Dependent Role="Arriendo">
         <PropertyRef Name="Id_Inmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCargo_EmpleadoCargo">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+    <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="EmpleadoCargo">
+        <PropertyRef Name="Codigo_Cargo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -358,6 +402,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKEmpleado_EmpleadoCargo">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="EmpleadoCargo">
+        <PropertyRef Name="Documento_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKEmpleado_Queja">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
     <End Role="Queja" Type="Self.Queja" Multiplicity="*" />
@@ -456,12 +512,14 @@
   </Association>
   <EntityContainer Name="DBInmobiliariaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Arriendoes" EntityType="Self.Arriendo" />
+    <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
     <EntitySet Name="Ciudads" EntityType="Self.Ciudad" />
     <EntitySet Name="Clientes" EntityType="Self.Cliente" />
     <EntitySet Name="Comisions" EntityType="Self.Comision" />
     <EntitySet Name="Contratoes" EntityType="Self.Contrato" />
     <EntitySet Name="Departamentoes" EntityType="Self.Departamento" />
     <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
+    <EntitySet Name="EmpleadoCargoes" EntityType="Self.EmpleadoCargo" />
     <EntitySet Name="Estadoes" EntityType="Self.Estado" />
     <EntitySet Name="FormaPagoes" EntityType="Self.FormaPago" />
     <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
@@ -485,6 +543,10 @@
     <AssociationSet Name="FKInmueble_Arriendo" Association="Self.FKInmueble_Arriendo">
       <End Role="Inmueble" EntitySet="Inmuebles" />
       <End Role="Arriendo" EntitySet="Arriendoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKCargo_EmpleadoCargo" Association="Self.FKCargo_EmpleadoCargo">
+      <End Role="Cargo" EntitySet="Cargoes" />
+      <End Role="EmpleadoCargo" EntitySet="EmpleadoCargoes" />
     </AssociationSet>
     <AssociationSet Name="FKCiudad_Inmueble" Association="Self.FKCiudad_Inmueble">
       <End Role="Ciudad" EntitySet="Ciudads" />
@@ -525,6 +587,10 @@
     <AssociationSet Name="FKPais_Departamento" Association="Self.FKPais_Departamento">
       <End Role="Pais" EntitySet="Pais" />
       <End Role="Departamento" EntitySet="Departamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleado_EmpleadoCargo" Association="Self.FKEmpleado_EmpleadoCargo">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="EmpleadoCargo" EntitySet="EmpleadoCargoes" />
     </AssociationSet>
     <AssociationSet Name="FKEmpleado_Queja" Association="Self.FKEmpleado_Queja">
       <End Role="Empleado" EntitySet="Empleadoes" />

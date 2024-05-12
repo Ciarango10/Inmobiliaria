@@ -15,6 +15,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cargoes">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.Cargo">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Ciudads">
       <EntityTypeMapping TypeName="DBInmobiliariaModel.Ciudad">
         <MappingFragment StoreEntitySet="Ciudad">
@@ -29,7 +38,9 @@
         <MappingFragment StoreEntitySet="Cliente">
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
@@ -73,10 +84,23 @@
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoCargoes">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.EmpleadoCargo">
+        <MappingFragment StoreEntitySet="EmpleadoCargo">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
+          <ScalarProperty Name="Codigo_Cargo" ColumnName="Codigo_Cargo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -104,6 +128,12 @@
           <ScalarProperty Name="IdInmueble" ColumnName="IdInmueble" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="NroHabitaciones" ColumnName="NroHabitaciones" />
+          <ScalarProperty Name="NroBaños" ColumnName="NroBaños" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="FechaPublicacion" ColumnName="FechaPublicacion" />
           <ScalarProperty Name="Id_Ciudad" ColumnName="Id_Ciudad" />
           <ScalarProperty Name="Id_TipoInmueble" ColumnName="Id_TipoInmueble" />
         </MappingFragment>

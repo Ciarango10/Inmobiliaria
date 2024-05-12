@@ -104,6 +104,12 @@ async function Consultar() {
         //La respuesta se escribe en los campos
         $("#txtDireccion").val(Resultado.Direccion);
         $("#txtPrecio").val(Resultado.Precio);
+        $("#txtArea").val(Resultado.Area);
+        $("#txtNroHabitaciones").val(Resultado.NroHabitaciones);
+        $("#txtNroBaños").val(Resultado.NroBaños);
+        $("#txtEstado").val(Resultado.Estado);
+        $("#txtCaracteristicas").val(Resultado.Caracteristicas);
+        $("#dtFechaPublicacion").val(new Date(Resultado.FechaPublicacion).toISOString().split('T')[0])
         $("#cboCiudad").val(Resultado.Id_Ciudad);
         $("#cboTipoInmueble").val(Resultado.Id_TipoInmueble);
     }
@@ -119,6 +125,12 @@ async function EjecutarComando(Comando) {
     let IdInmueble = $("#txtIdInmueble").val();
     let Direccion = $("#txtDireccion").val();
     let Precio = $("#txtPrecio").val();
+    let Area = $("#txtArea").val();
+    let NroHabitaciones = $("#txtNroHabitaciones").val();
+    let NroBaños = $("#txtNroBaños").val();
+    let Estado = $("#txtEstado").val();
+    let Caracteristicas = $("#txtCaracteristicas").val();
+    let FechaPublicacion = $("#dtFechaPublicacion").val();
     let Id_Ciudad = $("#cboCiudad").val();
     let Id_TipoInmueble = $("#cboTipoInmueble").val();
 
@@ -138,6 +150,12 @@ async function EjecutarComando(Comando) {
         IdInmueble: IdInmueble,
         Direccion: Direccion,
         Precio: Precio,
+        Area: Area,
+        NroHabitaciones: NroHabitaciones,
+        NroBaños: NroBaños,
+        Estado: Estado,
+        Caracteristicas: Caracteristicas,
+        FechaPublicacion: FechaPublicacion,
         Id_Ciudad: Id_Ciudad,
         Id_TipoInmueble: Id_TipoInmueble,
     }

@@ -29,19 +29,37 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtIdVisita">CÓDIGO VISITA</label>
                                                     <input type="text" class="form-control" id="txtIdVisita" placeholder="Código de la visita">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="dtFechaVisita">FECHA</label>
                                                     <input type="date" class="form-control" id="dtFechaVisita" placeholder="Fecha de la visita">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboCliente">CLIENTE</label>
+                                                    <select id="cboCliente" class="form-control">
+                                                        <option value="0">Seleccione...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboEmpleado">EMPLEADO</label>
+                                                    <select id="cboEmpleado" class="form-control">
+                                                        <option value="0">Seleccione...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="txtComentarios">COMENTARIOS</label>
                                                     <textarea class="form-control" placeholder="Comentarios sobre la visita" id="txtComentarios"></textarea>
@@ -51,75 +69,107 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="cboCliente">CLIENTE</label>
-                                                    <select id="cboCliente" class="form-control">
-                                                        <option value="0">Seleccione...</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="cboEmpleado">EMPLEADO</label>
-                                                    <select id="cboEmpleado" class="form-control">
-                                                        <option value="0">Seleccione...</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
                                                     <label for="cboInmueble">INMUEBLE</label>
                                                     <select id="cboInmueble" class="form-control">
                                                         <option value="0">Seleccione...</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtTipoInmueble">TIPO DE INMUEBLE</label>
+                                                    <input type="text" class="form-control" id="txtTipoInmueble" placeholder="Tipo del inmueble" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtCiudad">CIUDAD</label>
+                                                    <input type="text" class="form-control" id="txtCiudad" placeholder="Ciudad del inmueble" disabled>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card card-danger">
-                                    <div class="card-header">
-                                        <h3 class="card-title">PROCESO</h3>
-                                    </div>
-                                    <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <br />
-                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary">INSERTAR</button>
+                                                <div class="form-group">
+                                                    <label for="txtPrecio">PRECIO</label>
+                                                    <input type="text" class="form-control" id="txtPrecio" placeholder="Precio del inmueble" disabled>
+                                                </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <br />
-                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">ACTUALIZAR</button>
+                                                <div class="form-group">
+                                                    <label for="txtArea">ÁREA</label>
+                                                    <input type="text" class="form-control" id="txtArea" placeholder="Área del inmueble" disabled>
+                                                </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <br />
-                                                <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary">ELIMINAR</button>
+                                                <div class="form-group">
+                                                    <label for="txtNroHabitaciones">NÚMERO DE HABITACIONES</label>
+                                                    <input type="text" class="form-control" id="txtNroHabitaciones" placeholder="Número de habitaciones del inmueble" disabled>
+                                                </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <br />
-                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">CONSULTAR</button>
+                                                <div class="form-group">
+                                                    <label for="txtNroBaños">NÚMERO DE BAÑOS</label>
+                                                    <input type="text" class="form-control" id="txtNroBaños" placeholder="Número de baños del inmueble" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="txtCaracteristicas">CARACTERÍSTICAS</label>
+                                                        <textarea class="form-control" placeholder="Características del inmueble" id="txtCaracteristicas" disabled></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <table id="tblVisitas" class="table table-bordered table-striped" style="width:100%;">
-                                                <thead>
-                                                    <tr>
-                                                        <th>IdVisita</th>
-                                                        <th>Fecha</th>
-                                                        <th>Comentarios</th>
-                                                        <th>Cliente</th>
-                                                        <th>Empleado</th>
-                                                        <th>Inmueble</th>
-                                                    </tr>
-                                                </thead>
-                                            </table>
+                                    <div class="card card-danger">
+                                        <div class="card-header">
+                                            <h3 class="card-title">PROCESO</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <br />
+                                                    <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary">INSERTAR</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <br />
+                                                    <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">ACTUALIZAR</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <br />
+                                                    <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary">ELIMINAR</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <br />
+                                                    <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">CONSULTAR</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <table id="tblVisitas" class="table table-bordered table-striped" style="width:100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>IdVisita</th>
+                                                            <th>Fecha</th>
+                                                            <th>Comentarios</th>
+                                                            <th>Cliente</th>
+                                                            <th>Empleado</th>
+                                                            <th>Inmueble</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-footer">
-                                <div id="dvMensaje" class=""></div>
+                                <div class="card-footer">
+                                    <div id="dvMensaje" class=""></div>
+                                </div>
                             </div>
                         </form>
                     </div>

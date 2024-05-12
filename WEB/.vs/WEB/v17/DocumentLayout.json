@@ -1,36 +1,15 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\machado\\api\u0026servicios\\proyecto\\inmueble\\web\\paginas\\scripts\\visita.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\visita.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\inmueble.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
-          "DockedWidth": 92,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 133,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,68 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Visita.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Visita.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Visita.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Visita.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Visita.js",
-              "ViewState": "AQIAAKIAAAAAAAAAAAAAAKIAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-11T22:25:33.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Inmueble.js",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Inmueble.js",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Paginas\\Scripts\\Inmueble.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Inmueble.js",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAAAGwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T23:07:52.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Web.Release.config",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.Release.config",
-              "RelativeDocumentMoniker": "Web.Release.config",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.Release.config",
-              "RelativeToolTip": "Web.Release.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-24T21:08:51.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Web.Debug.config",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.Debug.config",
-              "RelativeDocumentMoniker": "Web.Debug.config",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.Debug.config",
-              "RelativeToolTip": "Web.Debug.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAACfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-24T21:11:00.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "D:\\Machado\\API\u0026SERVICIOS\\Proyecto\\Inmueble\\WEB\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAqwCsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-24T21:10:23.595Z",
-              "EditorCaption": ""
             }
           ]
         }
