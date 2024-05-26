@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Servicios.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -14,6 +15,9 @@ namespace Servicios
 
             // Rutas de Web API
             config.MapHttpAttributeRoutes();
+
+            //Manejo del token
+            config.MessageHandlers.Add(new TokenValidationHandler());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
