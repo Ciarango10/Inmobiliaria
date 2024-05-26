@@ -147,6 +147,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Perfils">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PaginaNavegar" ColumnName="PaginaNavegar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Quejas">
       <EntityTypeMapping TypeName="DBInmobiliariaModel.Queja">
         <MappingFragment StoreEntitySet="Queja">
@@ -164,6 +173,27 @@
         <MappingFragment StoreEntitySet="TipoInmueble">
           <ScalarProperty Name="IdTipoInmueble" ColumnName="IdTipoInmueble" />
           <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Documento_Empleado" ColumnName="Documento_Empleado" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_Perfil">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.Usuario_Perfil">
+        <MappingFragment StoreEntitySet="Usuario_Perfil">
+          <ScalarProperty Name="IdUsuarioPerfil" ColumnName="IdUsuarioPerfil" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

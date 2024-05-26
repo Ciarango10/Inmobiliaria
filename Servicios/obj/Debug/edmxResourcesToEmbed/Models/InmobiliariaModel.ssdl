@@ -133,6 +133,14 @@
     <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
   </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="IdPerfil" />
+    </Key>
+    <Property Name="IdPerfil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PaginaNavegar" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Queja">
     <Key>
       <PropertyRef Name="IdQueja" />
@@ -150,6 +158,25 @@
     </Key>
     <Property Name="IdTipoInmueble" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Tipo" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Documento_Empleado" Type="varchar" MaxLength="20" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="2000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario_Perfil">
+    <Key>
+      <PropertyRef Name="IdUsuarioPerfil" />
+    </Key>
+    <Property Name="IdUsuarioPerfil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdPerfil" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>
@@ -330,6 +357,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKEmpleado_Usuario">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="Documento_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKEmpleado_Venta">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
@@ -450,6 +489,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKPerfil_UsuarioPerfil">
+    <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKTipoInmueble_Inmueble">
     <End Role="TipoInmueble" Type="Self.TipoInmueble" Multiplicity="0..1" />
     <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="*" />
@@ -459,6 +510,18 @@
       </Principal>
       <Dependent Role="Inmueble">
         <PropertyRef Name="Id_TipoInmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuario_UsuarioPerfil">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="IdUsuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -476,8 +539,11 @@
     <EntitySet Name="FormaPago" EntityType="Self.FormaPago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inmueble" EntityType="Self.Inmueble" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Perfil" EntityType="Self.Perfil" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Queja" EntityType="Self.Queja" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoInmueble" EntityType="Self.TipoInmueble" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_Perfil" EntityType="Self.Usuario_Perfil" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Visita" EntityType="Self.Visita" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FKCargo_EmpleadoCargo" Association="Self.FKCargo_EmpleadoCargo">
@@ -532,6 +598,10 @@
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Queja" EntitySet="Queja" />
     </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Usuario" Association="Self.FKEmpleado_Usuario">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
     <AssociationSet Name="FKEmpleado_Venta" Association="Self.FKEmpleado_Venta">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Venta" EntitySet="Venta" />
@@ -572,9 +642,17 @@
       <End Role="Pais" EntitySet="Pais" />
       <End Role="Departamento" EntitySet="Departamento" />
     </AssociationSet>
+    <AssociationSet Name="FKPerfil_UsuarioPerfil" Association="Self.FKPerfil_UsuarioPerfil">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
+    </AssociationSet>
     <AssociationSet Name="FKTipoInmueble_Inmueble" Association="Self.FKTipoInmueble_Inmueble">
       <End Role="TipoInmueble" EntitySet="TipoInmueble" />
       <End Role="Inmueble" EntitySet="Inmueble" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuario_UsuarioPerfil" Association="Self.FKUsuario_UsuarioPerfil">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

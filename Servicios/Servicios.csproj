@@ -183,16 +183,21 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\clsCiudad.cs" />
     <Compile Include="Clases\clsCliente.cs" />
+    <Compile Include="Clases\clsCypher.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
     <Compile Include="Clases\clsInmueble.cs" />
+    <Compile Include="Clases\clsPerfil.cs" />
     <Compile Include="Clases\clsTipoInmueble.cs" />
+    <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Clases\clsVisita.cs" />
     <Compile Include="Controllers\CiudadesController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InmueblesController.cs" />
+    <Compile Include="Controllers\PerfilesController.cs" />
     <Compile Include="Controllers\TipoInmueblesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VisitasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -252,10 +257,19 @@
     <Compile Include="Models\Pai.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Perfil.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Queja.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoInmueble.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>InmobiliariaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario_Perfil.cs">
       <DependentUpon>InmobiliariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">

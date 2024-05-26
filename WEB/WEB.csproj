@@ -200,7 +200,9 @@
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.woff" />
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.woff2" />
     <Content Include="Paginas\Inmueble.html" />
+    <Content Include="Paginas\Scripts\Usuario.js" />
     <Content Include="Paginas\Scripts\Visita.js" />
+    <Content Include="Paginas\Usuario.html" />
     <Content Include="Paginas\Visita.html" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />

@@ -38,8 +38,11 @@ namespace Servicios.Models
         public virtual DbSet<FormaPago> FormaPagoes { get; set; }
         public virtual DbSet<Inmueble> Inmuebles { get; set; }
         public virtual DbSet<Pai> Pais { get; set; }
+        public virtual DbSet<Perfil> Perfils { get; set; }
         public virtual DbSet<Queja> Quejas { get; set; }
         public virtual DbSet<TipoInmueble> TipoInmuebles { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Usuario_Perfil> Usuario_Perfil { get; set; }
         public virtual DbSet<Venta> Ventas { get; set; }
         public virtual DbSet<Visita> Visitas { get; set; }
     }

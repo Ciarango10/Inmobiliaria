@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\clases\\clsinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\clases\\clstipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clstipoinmueble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\servicios\\clases\\clsvisita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsvisita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,49 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsTipoInmueble.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsTipoInmueble.cs",
-              "RelativeDocumentMoniker": "Clases\\clsTipoInmueble.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsTipoInmueble.cs",
-              "RelativeToolTip": "Clases\\clsTipoInmueble.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T22:16:13.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsInmueble.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsInmueble.cs",
-              "RelativeDocumentMoniker": "Clases\\clsInmueble.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsInmueble.cs",
-              "RelativeToolTip": "Clases\\clsInmueble.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAADwv0cAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T22:15:38.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsVisita.cs",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsVisita.cs",
-              "RelativeDocumentMoniker": "Clases\\clsVisita.cs",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsVisita.cs",
-              "RelativeToolTip": "Clases\\clsVisita.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T22:15:18.283Z",
-              "EditorCaption": ""
             }
           ]
         }

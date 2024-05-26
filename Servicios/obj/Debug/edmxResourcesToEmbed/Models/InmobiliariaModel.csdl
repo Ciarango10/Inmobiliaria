@@ -106,6 +106,7 @@
     <NavigationProperty Name="Contratoes" Relationship="Self.FKEmpleado_Contrato" FromRole="Empleado" ToRole="Contrato" />
     <NavigationProperty Name="EmpleadoCargoes" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="Empleado" ToRole="EmpleadoCargo" />
     <NavigationProperty Name="Quejas" Relationship="Self.FKEmpleado_Queja" FromRole="Empleado" ToRole="Queja" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FKEmpleado_Usuario" FromRole="Empleado" ToRole="Usuario" />
     <NavigationProperty Name="Ventas" Relationship="Self.FKEmpleado_Venta" FromRole="Empleado" ToRole="Venta" />
     <NavigationProperty Name="Visitas" Relationship="Self.FKEmpleado_Visita" FromRole="Empleado" ToRole="Visita" />
   </EntityType>
@@ -170,6 +171,15 @@
     <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Departamentoes" Relationship="Self.FKPais_Departamento" FromRole="Pais" ToRole="Departamento" />
   </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="IdPerfil" />
+    </Key>
+    <Property Name="IdPerfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaginaNavegar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Usuario_Perfil" Relationship="Self.FKPerfil_UsuarioPerfil" FromRole="Perfil" ToRole="Usuario_Perfil" />
+  </EntityType>
   <EntityType Name="Queja">
     <Key>
       <PropertyRef Name="IdQueja" />
@@ -191,6 +201,29 @@
     <Property Name="IdTipoInmueble" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Tipo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Inmuebles" Relationship="Self.FKTipoInmueble_Inmueble" FromRole="TipoInmueble" ToRole="Inmueble" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Documento_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Clave" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Salt" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_Usuario" FromRole="Usuario" ToRole="Empleado" />
+    <NavigationProperty Name="Usuario_Perfil" Relationship="Self.FKUsuario_UsuarioPerfil" FromRole="Usuario" ToRole="Usuario_Perfil" />
+  </EntityType>
+  <EntityType Name="Usuario_Perfil">
+    <Key>
+      <PropertyRef Name="IdUsuarioPerfil" />
+    </Key>
+    <Property Name="IdUsuarioPerfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdPerfil" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Perfil" Relationship="Self.FKPerfil_UsuarioPerfil" FromRole="Usuario_Perfil" ToRole="Perfil" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FKUsuario_UsuarioPerfil" FromRole="Usuario_Perfil" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>
@@ -426,6 +459,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKEmpleado_Usuario">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="Documento_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKEmpleado_Venta">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
@@ -510,6 +555,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKPerfil_UsuarioPerfil">
+    <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuario_UsuarioPerfil">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DBInmobiliariaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Arriendoes" EntityType="Self.Arriendo" />
     <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
@@ -524,8 +593,11 @@
     <EntitySet Name="FormaPagoes" EntityType="Self.FormaPago" />
     <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
     <EntitySet Name="Pais" EntityType="Self.Pai" />
+    <EntitySet Name="Perfils" EntityType="Self.Perfil" />
     <EntitySet Name="Quejas" EntityType="Self.Queja" />
     <EntitySet Name="TipoInmuebles" EntityType="Self.TipoInmueble" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <EntitySet Name="Usuario_Perfil" EntityType="Self.Usuario_Perfil" />
     <EntitySet Name="Ventas" EntityType="Self.Venta" />
     <EntitySet Name="Visitas" EntityType="Self.Visita" />
     <AssociationSet Name="FKCliente_Arriendo" Association="Self.FKCliente_Arriendo">
@@ -596,6 +668,10 @@
       <End Role="Empleado" EntitySet="Empleadoes" />
       <End Role="Queja" EntitySet="Quejas" />
     </AssociationSet>
+    <AssociationSet Name="FKEmpleado_Usuario" Association="Self.FKEmpleado_Usuario">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
     <AssociationSet Name="FKEmpleado_Venta" Association="Self.FKEmpleado_Venta">
       <End Role="Empleado" EntitySet="Empleadoes" />
       <End Role="Venta" EntitySet="Ventas" />
@@ -623,6 +699,14 @@
     <AssociationSet Name="FKTipoInmueble_Inmueble" Association="Self.FKTipoInmueble_Inmueble">
       <End Role="TipoInmueble" EntitySet="TipoInmuebles" />
       <End Role="Inmueble" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FKPerfil_UsuarioPerfil" Association="Self.FKPerfil_UsuarioPerfil">
+      <End Role="Perfil" EntitySet="Perfils" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuario_UsuarioPerfil" Association="Self.FKUsuario_UsuarioPerfil">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

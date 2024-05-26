@@ -22,6 +22,7 @@ namespace Servicios.Models
             this.Contratoes = new HashSet<Contrato>();
             this.EmpleadoCargoes = new HashSet<EmpleadoCargo>();
             this.Quejas = new HashSet<Queja>();
+            this.Usuarios = new HashSet<Usuario>();
             this.Ventas = new HashSet<Venta>();
             this.Visitas = new HashSet<Visita>();
         }
@@ -50,6 +51,10 @@ namespace Servicios.Models
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Queja> Quejas { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuario> Usuarios { get; set; }
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
