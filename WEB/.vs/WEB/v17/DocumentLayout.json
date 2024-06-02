@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\web\\paginas\\scripts\\facturacion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\facturacion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\web\\paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\web\\paginas\\facturacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\facturacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\web\\paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\WEB\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 133,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,58 +42,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Empleado.js",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Scripts\\Empleado.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Empleado.js",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Scripts\\Empleado.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Empleado.js",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwDMAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-01T23:42:41.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Menu.html",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Menu.html",
-              "RelativeDocumentMoniker": "Paginas\\Menu.html",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Menu.html",
-              "RelativeToolTip": "Paginas\\Menu.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-01T22:36:07.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Facturacion.html",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Facturacion.html",
-              "RelativeDocumentMoniker": "Paginas\\Facturacion.html",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Facturacion.html",
-              "RelativeToolTip": "Paginas\\Facturacion.html",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAIwGcAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-01T22:21:42.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Facturacion.js",
-              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Scripts\\Facturacion.js",
-              "RelativeDocumentMoniker": "Paginas\\Scripts\\Facturacion.js",
-              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Scripts\\Facturacion.js",
-              "RelativeToolTip": "Paginas\\Scripts\\Facturacion.js",
-              "ViewState": "AQIAACAAAAAAAAAAAAAcwCsAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-01T22:20:25.858Z",
-              "EditorCaption": ""
             }
           ]
         }
