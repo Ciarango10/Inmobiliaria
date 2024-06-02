@@ -1,4 +1,6 @@
 ﻿var oTabla = $("#tblVisitas").DataTable();
+let Token = getCookie("token");
+
 jQuery(function () {
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("../Paginas/Menu.html");
@@ -34,7 +36,7 @@ jQuery(function () {
 });
 
 async function LlenarTablaVisitas() {
-    LlenarTablaXServicios("https://localhost:44340/api/Visitas/ConsultarConTodo", "#tblVisitas");
+    LlenarTablaServiciosAuth("https://localhost:44340/api/Visitas/ConsultarConTodo", "#tblVisitas");
 }
 
 async function LlenarComboEmpleados() {
@@ -46,7 +48,8 @@ async function LlenarComboEmpleados() {
                 method: "GET",
                 mode: "cors",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 }
             });
         const Rpta = await Respuesta.json();
@@ -59,6 +62,8 @@ async function LlenarComboEmpleados() {
     }
     catch (error) {
         //Se presenta la respuesta en el div mensaje
+        $("#dvMensaje").removeClass("alert alert-success");
+        $("#dvMensaje").addClass("alert alert-danger");
         $("#dvMensaje").html(error);
     }
 }
@@ -72,7 +77,8 @@ async function LlenarComboClientes() {
                 method: "GET",
                 mode: "cors",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 }
             });
         const Rpta = await Respuesta.json();
@@ -85,6 +91,8 @@ async function LlenarComboClientes() {
     }
     catch (error) {
         //Se presenta la respuesta en el div mensaje
+        $("#dvMensaje").removeClass("alert alert-success");
+        $("#dvMensaje").addClass("alert alert-danger");
         $("#dvMensaje").html(error);
     }
 }
@@ -98,7 +106,8 @@ async function LlenarComboInmuebles() {
                 method: "GET",
                 mode: "cors",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 }
             });
         const Rpta = await Respuesta.json();
@@ -142,6 +151,8 @@ async function LlenarComboInmuebles() {
     }
     catch (error) {
         //Se presenta la respuesta en el div mensaje
+        $("#dvMensaje").removeClass("alert alert-success");
+        $("#dvMensaje").addClass("alert alert-danger");
         $("#dvMensaje").html(error);
     }
 }
@@ -156,6 +167,7 @@ async function Consultar() {
                 mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 }
             });
         //Leer la respuesta y presentarla en el div
@@ -171,6 +183,8 @@ async function Consultar() {
         $("#cboInmueble").trigger('change');
     }
     catch (error) {
+        $("#dvMensaje").removeClass("alert alert-success");
+        $("#dvMensaje").addClass("alert alert-danger");
         $("#dvMensaje").html(error);
     }
 
@@ -224,6 +238,7 @@ async function EjecutarComando(Comando) {
                 mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 },
                 body: JSON.stringify(DatosVisita)
 

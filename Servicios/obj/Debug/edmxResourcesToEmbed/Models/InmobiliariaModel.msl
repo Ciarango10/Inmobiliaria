@@ -79,6 +79,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="DetalleFacturas">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.DetalleFactura">
+        <MappingFragment StoreEntitySet="DetalleFactura">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="CodigoInmueble" ColumnName="CodigoInmueble" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ValorUnitario" ColumnName="ValorUnitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Empleadoes">
       <EntityTypeMapping TypeName="DBInmobiliariaModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
@@ -110,6 +121,16 @@
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="DBInmobiliariaModel.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="CodigoEmpleado" ColumnName="CodigoEmpleado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -9,11 +9,18 @@
 
 namespace Servicios.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
     public partial class EmpleadoCargo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EmpleadoCargo()
+        {
+            this.Facturas = new HashSet<Factura>();
+        }
+    
         public int Codigo { get; set; }
         public Nullable<System.DateTime> FechaInicio { get; set; }
         public Nullable<System.DateTime> FechaFin { get; set; }
@@ -22,5 +29,9 @@ namespace Servicios.Models
     
         public virtual Cargo Cargo { get; set; }
         public virtual Empleado Empleado { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Factura> Facturas { get; set; }
     }
 }

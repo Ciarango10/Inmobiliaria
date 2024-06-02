@@ -53,6 +53,7 @@
     <NavigationProperty Name="Quejas" Relationship="Self.FKCliente_Queja" FromRole="Cliente" ToRole="Queja" />
     <NavigationProperty Name="Ventas" Relationship="Self.FKCliente_Venta" FromRole="Cliente" ToRole="Venta" />
     <NavigationProperty Name="Visitas" Relationship="Self.FKCliente_Visita" FromRole="Cliente" ToRole="Visita" />
+    <NavigationProperty Name="Facturas" Relationship="Self.FKFactura_Cliente" FromRole="Cliente" ToRole="Factura" />
   </EntityType>
   <EntityType Name="Comision">
     <Key>
@@ -90,6 +91,18 @@
     <NavigationProperty Name="Ciudads" Relationship="Self.FKDepartamento_Ciudad" FromRole="Departamento" ToRole="Ciudad" />
     <NavigationProperty Name="Pai" Relationship="Self.FKPais_Departamento" FromRole="Departamento" ToRole="Pais" />
   </EntityType>
+  <EntityType Name="DetalleFactura">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="CodigoInmueble" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="ValorUnitario" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="Self.FKDetalleFactura_Factura" FromRole="DetalleFactura" ToRole="Factura" />
+    <NavigationProperty Name="Inmueble" Relationship="Self.FKDetalleFactura_Inmueble" FromRole="DetalleFactura" ToRole="Inmueble" />
+  </EntityType>
   <EntityType Name="Empleado">
     <Key>
       <PropertyRef Name="Documento" />
@@ -121,6 +134,7 @@
     <Property Name="Codigo_Cargo" Type="Int32" />
     <NavigationProperty Name="Cargo" Relationship="Self.FKCargo_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Cargo" />
     <NavigationProperty Name="Empleado" Relationship="Self.FKEmpleado_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Empleado" />
+    <NavigationProperty Name="Facturas" Relationship="Self.FKFactura_EmpleadoCargo" FromRole="EmpleadoCargo" ToRole="Factura" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
@@ -130,6 +144,18 @@
     <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Quejas" Relationship="Self.FKEstado_Queja" FromRole="Estado" ToRole="Queja" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="Documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CodigoEmpleado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FKFactura_Cliente" FromRole="Factura" ToRole="Cliente" />
+    <NavigationProperty Name="DetalleFacturas" Relationship="Self.FKDetalleFactura_Factura" FromRole="Factura" ToRole="DetalleFactura" />
+    <NavigationProperty Name="EmpleadoCargo" Relationship="Self.FKFactura_EmpleadoCargo" FromRole="Factura" ToRole="EmpleadoCargo" />
   </EntityType>
   <EntityType Name="FormaPago">
     <Key>
@@ -159,6 +185,7 @@
     <NavigationProperty Name="Arriendoes" Relationship="Self.FKInmueble_Arriendo" FromRole="Inmueble" ToRole="Arriendo" />
     <NavigationProperty Name="Ciudad" Relationship="Self.FKCiudad_Inmueble" FromRole="Inmueble" ToRole="Ciudad" />
     <NavigationProperty Name="Contratoes" Relationship="Self.FKInmueble_Contrato" FromRole="Inmueble" ToRole="Contrato" />
+    <NavigationProperty Name="DetalleFacturas" Relationship="Self.FKDetalleFactura_Inmueble" FromRole="Inmueble" ToRole="DetalleFactura" />
     <NavigationProperty Name="Ventas" Relationship="Self.FKInmueble_Venta" FromRole="Inmueble" ToRole="Venta" />
     <NavigationProperty Name="Visitas" Relationship="Self.FKInmueble_Visita" FromRole="Inmueble" ToRole="Visita" />
     <NavigationProperty Name="TipoInmueble" Relationship="Self.FKTipoInmueble_Inmueble" FromRole="Inmueble" ToRole="TipoInmueble" />
@@ -387,6 +414,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKFactura_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKContrato_Comision">
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="0..1" />
     <End Role="Comision" Type="Self.Comision" Multiplicity="*" />
@@ -432,6 +471,30 @@
       </Principal>
       <Dependent Role="Departamento">
         <PropertyRef Name="Id_Pais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDetalleFactura_Factura">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="Numero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDetalleFactura_Inmueble">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="CodigoInmueble" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -492,6 +555,18 @@
       </Principal>
       <Dependent Role="Visita">
         <PropertyRef Name="Documento_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFactura_EmpleadoCargo">
+    <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpleadoCargo">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="CodigoEmpleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -587,9 +662,11 @@
     <EntitySet Name="Comisions" EntityType="Self.Comision" />
     <EntitySet Name="Contratoes" EntityType="Self.Contrato" />
     <EntitySet Name="Departamentoes" EntityType="Self.Departamento" />
+    <EntitySet Name="DetalleFacturas" EntityType="Self.DetalleFactura" />
     <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
     <EntitySet Name="EmpleadoCargoes" EntityType="Self.EmpleadoCargo" />
     <EntitySet Name="Estadoes" EntityType="Self.Estado" />
+    <EntitySet Name="Facturas" EntityType="Self.Factura" />
     <EntitySet Name="FormaPagoes" EntityType="Self.FormaPago" />
     <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
     <EntitySet Name="Pais" EntityType="Self.Pai" />
@@ -644,6 +721,10 @@
       <End Role="Cliente" EntitySet="Clientes" />
       <End Role="Visita" EntitySet="Visitas" />
     </AssociationSet>
+    <AssociationSet Name="FKFactura_Cliente" Association="Self.FKFactura_Cliente">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Factura" EntitySet="Facturas" />
+    </AssociationSet>
     <AssociationSet Name="FKContrato_Comision" Association="Self.FKContrato_Comision">
       <End Role="Contrato" EntitySet="Contratoes" />
       <End Role="Comision" EntitySet="Comisions" />
@@ -659,6 +740,14 @@
     <AssociationSet Name="FKPais_Departamento" Association="Self.FKPais_Departamento">
       <End Role="Pais" EntitySet="Pais" />
       <End Role="Departamento" EntitySet="Departamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKDetalleFactura_Factura" Association="Self.FKDetalleFactura_Factura">
+      <End Role="Factura" EntitySet="Facturas" />
+      <End Role="DetalleFactura" EntitySet="DetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FKDetalleFactura_Inmueble" Association="Self.FKDetalleFactura_Inmueble">
+      <End Role="Inmueble" EntitySet="Inmuebles" />
+      <End Role="DetalleFactura" EntitySet="DetalleFacturas" />
     </AssociationSet>
     <AssociationSet Name="FKEmpleado_EmpleadoCargo" Association="Self.FKEmpleado_EmpleadoCargo">
       <End Role="Empleado" EntitySet="Empleadoes" />
@@ -679,6 +768,10 @@
     <AssociationSet Name="FKEmpleado_Visita" Association="Self.FKEmpleado_Visita">
       <End Role="Empleado" EntitySet="Empleadoes" />
       <End Role="Visita" EntitySet="Visitas" />
+    </AssociationSet>
+    <AssociationSet Name="FKFactura_EmpleadoCargo" Association="Self.FKFactura_EmpleadoCargo">
+      <End Role="EmpleadoCargo" EntitySet="EmpleadoCargoes" />
+      <End Role="Factura" EntitySet="Facturas" />
     </AssociationSet>
     <AssociationSet Name="FKEstado_Queja" Association="Self.FKEstado_Queja">
       <End Role="Estado" EntitySet="Estadoes" />

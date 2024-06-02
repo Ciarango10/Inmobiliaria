@@ -1,4 +1,6 @@
 ﻿var oTabla = $("#tblEmpleados").DataTable();
+let Token = getCookie("token");
+
 jQuery(function () {
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("../Paginas/Menu.html");
@@ -25,7 +27,7 @@ jQuery(function () {
 });
 
 async function LlenarTablaEmpleados() {
-    LlenarTablaXServicios("https://localhost:44340/api/Empleados", "#tblEmpleados");
+    LlenarTablaServiciosAuth("https://localhost:44340/api/Empleados", "#tblEmpleados");
 }
 
 async function Consultar() {
@@ -38,6 +40,7 @@ async function Consultar() {
                 mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 }
             });
         //Leer la respuesta y presentarla en el div
@@ -94,6 +97,7 @@ async function EjecutarComando(Comando) {
                 mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + Token
                 },
                 body: JSON.stringify(DatosEmpleado)
 

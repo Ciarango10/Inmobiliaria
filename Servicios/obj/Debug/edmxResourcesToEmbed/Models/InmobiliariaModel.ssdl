@@ -71,6 +71,16 @@
     <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Id_Pais" Type="int" />
   </EntityType>
+  <EntityType Name="DetalleFactura">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="CodigoInmueble" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="ValorUnitario" Type="float" Nullable="false" />
+  </EntityType>
   <EntityType Name="Empleado">
     <Key>
       <PropertyRef Name="Documento" />
@@ -101,6 +111,15 @@
     <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Documento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="CodigoEmpleado" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="FormaPago">
     <Key>
@@ -309,6 +328,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FKDetalleFactura_Factura">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="Numero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDetalleFactura_Inmueble">
+    <End Role="Inmueble" Type="Self.Inmueble" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inmueble">
+        <PropertyRef Name="IdInmueble" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="CodigoInmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FKEmpleado_Arriendo">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
     <End Role="Arriendo" Type="Self.Arriendo" Multiplicity="*" />
@@ -402,6 +445,30 @@
       </Principal>
       <Dependent Role="Queja">
         <PropertyRef Name="Id_Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFactura_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFactura_EmpleadoCargo">
+    <End Role="EmpleadoCargo" Type="Self.EmpleadoCargo" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpleadoCargo">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="CodigoEmpleado" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -533,9 +600,11 @@
     <EntitySet Name="Comision" EntityType="Self.Comision" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleFactura" EntityType="Self.DetalleFactura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EmpleadoCargo" EntityType="Self.EmpleadoCargo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FormaPago" EntityType="Self.FormaPago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Inmueble" EntityType="Self.Inmueble" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
@@ -582,6 +651,14 @@
       <End Role="Departamento" EntitySet="Departamento" />
       <End Role="Ciudad" EntitySet="Ciudad" />
     </AssociationSet>
+    <AssociationSet Name="FKDetalleFactura_Factura" Association="Self.FKDetalleFactura_Factura">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FKDetalleFactura_Inmueble" Association="Self.FKDetalleFactura_Inmueble">
+      <End Role="Inmueble" EntitySet="Inmueble" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
     <AssociationSet Name="FKEmpleado_Arriendo" Association="Self.FKEmpleado_Arriendo">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Arriendo" EntitySet="Arriendo" />
@@ -613,6 +690,14 @@
     <AssociationSet Name="FKEstado_Queja" Association="Self.FKEstado_Queja">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Queja" EntitySet="Queja" />
+    </AssociationSet>
+    <AssociationSet Name="FKFactura_Cliente" Association="Self.FKFactura_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FKFactura_EmpleadoCargo" Association="Self.FKFactura_EmpleadoCargo">
+      <End Role="EmpleadoCargo" EntitySet="EmpleadoCargo" />
+      <End Role="Factura" EntitySet="Factura" />
     </AssociationSet>
     <AssociationSet Name="FKFormaPago_Arriendo" Association="Self.FKFormaPago_Arriendo">
       <End Role="FormaPago" EntitySet="FormaPago" />

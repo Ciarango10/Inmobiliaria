@@ -12,6 +12,8 @@ namespace Servicios.Controllers
 {
     [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
     [RoutePrefix("api/Usuarios")]
+    [AllowAnonymous]
+
     public class UsuariosController : ApiController
     {
         [HttpPost]

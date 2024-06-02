@@ -11,7 +11,7 @@ using System.Web.Http.Cors;
 namespace Servicios.Controllers
 {
     [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
-
+    [Authorize]
     public class TipoInmueblesController : ApiController
     {
         // GET api/<controller>
@@ -21,10 +21,12 @@ namespace Servicios.Controllers
             return _tipoInmueble.ConsultarTodos();
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/TipoInmuebles/LlenarCombo")]
+        public IQueryable LlenarCombo()
         {
-            return "value";
+            clsTipoInmueble _tipoInmueble = new clsTipoInmueble();
+            return _tipoInmueble.LlenarCombo();
         }
 
         // POST api/<controller>

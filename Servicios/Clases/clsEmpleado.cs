@@ -80,6 +80,19 @@ namespace Servicios.Clases
                    };
         }
 
+        public IQueryable LlenarCombo()
+        {
+            return from E in dbInmobiliaria.Set<Empleado>()
+                   join EC in dbInmobiliaria.Set<EmpleadoCargo>()
+                   on E.Documento equals EC.Documento_Empleado
+                   where EC.Codigo_Cargo == 1
+                   select new
+                   {
+                       Codigo = EC.Codigo,
+                       Nombre = E.Nombre + " " + E.PrimerApellido + " " + E.SegundoApellido
+                   };
+        }
+
         public string Eliminar()
         {
 

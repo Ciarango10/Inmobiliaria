@@ -23,6 +23,7 @@ namespace Servicios.Models
             this.Quejas = new HashSet<Queja>();
             this.Ventas = new HashSet<Venta>();
             this.Visitas = new HashSet<Visita>();
+            this.Facturas = new HashSet<Factura>();
         }
     
         public string Documento { get; set; }
@@ -53,5 +54,9 @@ namespace Servicios.Models
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Visita> Visitas { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Factura> Facturas { get; set; }
     }
 }

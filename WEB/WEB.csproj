@@ -161,12 +161,14 @@
     <Content Include="Paginas\Estilos\webfonts\fa-brands-400.svg" />
     <Content Include="Paginas\Estilos\webfonts\fa-regular-400.svg" />
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.svg" />
+    <Content Include="Paginas\Facturacion.html" />
     <Content Include="Paginas\Login.html" />
     <Content Include="Paginas\Menu.html" />
     <Content Include="Paginas\PaginaBase.html" />
     <Content Include="Paginas\Scripts\Cliente.js" />
     <Content Include="Paginas\Scripts\Comunes\Combos.js" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
+    <Content Include="Paginas\Scripts\Facturacion.js" />
     <Content Include="Paginas\Scripts\Inmueble.js" />
     <Content Include="Paginas\Scripts\Comunes\Tablas.js" />
     <Content Include="Paginas\Scripts\Empleado.js" />

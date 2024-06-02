@@ -11,6 +11,7 @@ using System.Web.Http.Cors;
 namespace Servicios.Controllers
 {
     [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
+    [Authorize]
 
     public class CiudadesController : ApiController
     {

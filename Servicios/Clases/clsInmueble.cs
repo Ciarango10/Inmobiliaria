@@ -71,7 +71,7 @@ namespace Servicios.Clases
                        Caracteristicas = I.Caracteristicas,
                        FechaPublicacion = I.FechaPublicacion,
                        TipoInmueble = T.Tipo,
-                       Ciudad = C.Nombre 
+                       Ciudad = C.Nombre
                    };
         }
 
@@ -82,9 +82,20 @@ namespace Servicios.Clases
             return dbInmobiliaria.Inmuebles.FirstOrDefault(i => i.IdInmueble == IdInmueble);
         }
 
-         public List<Inmueble> ConsultarTodos()
+        public List<Inmueble> ConsultarTodos()
         {
             return dbInmobiliaria.Inmuebles.OrderBy(i => i.Direccion).ToList();
+        }
+
+        public IQueryable LlenarCombo(int idTipoInmueble)
+        {
+            return from I in dbInmobiliaria.Set<Inmueble>()
+                   where I.Id_TipoInmueble == idTipoInmueble
+                   select new
+                   {
+                       Codigo = I.IdInmueble + "|" + I.Precio,
+                       Nombre = I.Direccion
+                   };
         }
 
         public string Eliminar()

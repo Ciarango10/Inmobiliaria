@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\",
+  "WorkspaceRootPath": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|c:\\users\\user\\desktop\\inmobiliaria\\inmobiliaria\\servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\servicios\\clases\\clsfacturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clsfacturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|c:\\users\\user\\desktop\\inmobiliaria\\inmobiliaria\\servicios\\clases\\clslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|d:\\carlos\\escritorio\\inmobiliaria\\inmobiliaria\\servicios\\controllers\\facturacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:controllers\\facturacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\clases\\clslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:clases\\clslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C2A393-F44C-486D-8705-61114E9B397B}|Servicios.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,35 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 92,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsLogin.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsLogin.cs",
-              "RelativeDocumentMoniker": "Clases\\clsLogin.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsLogin.cs",
-              "RelativeToolTip": "Clases\\clsLogin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T22:50:26.421Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T22:52:43.215Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
@@ -80,16 +57,61 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsLogin.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsLogin.cs",
+              "RelativeDocumentMoniker": "Clases\\clsLogin.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsLogin.cs",
+              "RelativeToolTip": "Clases\\clsLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:50:26.421Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:52:43.215Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FacturacionController.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\FacturacionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FacturacionController.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Controllers\\FacturacionController.cs",
+              "RelativeToolTip": "Controllers\\FacturacionController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T23:36:53.979Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\Servicios\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-26T23:52:19.971Z",
+              "Title": "clsFacturacion.cs",
+              "DocumentMoniker": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsFacturacion.cs",
+              "RelativeDocumentMoniker": "Clases\\clsFacturacion.cs",
+              "ToolTip": "D:\\Carlos\\Escritorio\\Inmobiliaria\\Inmobiliaria\\Servicios\\Clases\\clsFacturacion.cs",
+              "RelativeToolTip": "Clases\\clsFacturacion.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAUwDgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T23:22:13.655Z",
               "EditorCaption": ""
             }
           ]

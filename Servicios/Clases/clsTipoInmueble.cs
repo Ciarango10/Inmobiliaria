@@ -18,5 +18,16 @@ namespace Servicios.Clases
         {
             return dbInmobiliaria.TipoInmuebles.OrderBy(c => c.Tipo).ToList();
         }
+
+        public IQueryable LlenarCombo()
+        {
+            return from TI in dbInmobiliaria.Set<TipoInmueble>()
+                   orderby TI.Tipo
+                   select new
+                   {
+                       Codigo = TI.IdTipoInmueble,
+                       Nombre = TI.Tipo
+                   };
+        }
     }
 }

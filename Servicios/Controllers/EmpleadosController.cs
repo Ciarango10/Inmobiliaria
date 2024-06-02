@@ -12,6 +12,8 @@ using System.Xml.Linq;
 namespace Servicios.Controllers
 {
     [EnableCors(origins: "https://localhost:44320", headers: "*", methods: "*")]
+    [Authorize]
+
     public class EmpleadosController : ApiController
     {
         // GET sin parámetros -- Invoca el consultar todos
@@ -35,6 +37,14 @@ namespace Servicios.Controllers
         {
             clsEmpleado _empleado = new clsEmpleado();
             return _empleado.ConsultarConCargo(Documento);
+        }
+
+        [HttpGet]
+        [Route("api/Empleados/LlenarCombo")]
+        public IQueryable LlenarCombo()
+        {
+            clsEmpleado _empleado = new clsEmpleado();
+            return _empleado.LlenarCombo();
         }
 
         // POST -- Invoca el método insertar 
