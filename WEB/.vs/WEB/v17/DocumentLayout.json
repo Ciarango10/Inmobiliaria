@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\WEB\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|c:\\users\\user\\desktop\\inmobiliaria\\inmobiliaria\\web\\paginas\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01D03242-C63B-41D6-9791-4778C861299C}|WEB.csproj|solutionrelative:paginas\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 133,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +47,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.html",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Login.html",
+              "RelativeDocumentMoniker": "Paginas\\Login.html",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Inmobiliaria\\Inmobiliaria\\WEB\\Paginas\\Login.html",
+              "RelativeToolTip": "Paginas\\Login.html",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAACMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-05T23:07:02.112Z",
+              "EditorCaption": ""
             }
           ]
         }
